@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -21,7 +20,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
@@ -37,41 +35,44 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <>
       {/* Hero Section */}
-      <section className="section-curve relative -mt-px overflow-hidden bg-soft-blue-strong">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <section className="section-ribbon section-curve relative overflow-hidden py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 font-bold text-5xl md:text-6xl text-foreground">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+              Get in Touch
+            </p>
+            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               Let's Connect
             </h1>
-            <p className="mb-4 text-xl text-muted">
-              I'm here to support your healing journey.
-            </p>
-            <p className="text-lg text-muted leading-relaxed">
-              Whether you're ready to book a session, have questions, or want to discuss speaking opportunities, 
-              I'd love to hear from you.
+            <p className="mt-4 text-lg text-slate-600">
+              I&apos;m here to support your healing journey. Reach out with questions or to book a session.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="section-curve relative py-16 lg:py-24">
-        <div className="mx-auto max-w-2xl px-6 lg:px-10">
-          {submitted ? (
-            <div className="rounded-lg bg-soft-blue-strong p-8 text-center soft-card">
-              <h2 className="mb-4 text-2xl font-bold text-foreground">Thank You!</h2>
-              <p className="text-lg text-muted leading-relaxed">
-                I've received your message and will be in touch within 24-48 hours. 
-                Thank you for reaching out.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Contact Form Section */}
+      <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+              Book a Session or Send a Message
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Fill out the form below and I&apos;ll be in touch shortly to discuss how I can support you.
+            </p>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="soft-card rounded-[2rem] border border-slate-100 bg-white p-8 sm:p-12"
+          >
+            <div className="grid gap-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
-                  Full Name
+                <label htmlFor="name" className="block text-sm font-semibold text-slate-900">
+                  Full Name *
                 </label>
                 <input
                   type="text"
@@ -80,204 +81,179 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-lg border-2 border-soft-blue-strong px-4 py-3 text-foreground placeholder-muted transition-colors focus:outline-none focus:border-peach"
                   placeholder="Your name"
+                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
                 />
               </div>
-
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full rounded-lg border-2 border-soft-blue-strong px-4 py-3 text-foreground placeholder-muted transition-colors focus:outline-none focus:border-peach"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
-                    Phone Number (Optional)
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border-2 border-soft-blue-strong px-4 py-3 text-foreground placeholder-muted transition-colors focus:outline-none focus:border-peach"
-                    placeholder="(123) 456-7890"
-                  />
-                </div>
-              </div>
-
               <div>
-                <label htmlFor="serviceType" className="block text-sm font-semibold text-foreground mb-2">
-                  What are you interested in?
+                <label htmlFor="email" className="block text-sm font-semibold text-slate-900">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="your@email.com"
+                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                />
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              <div>
+                <label htmlFor="phone" className="block text-sm font-semibold text-slate-900">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="(555) 123-4567"
+                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                />
+              </div>
+              <div>
+                <label htmlFor="serviceType" className="block text-sm font-semibold text-slate-900">
+                  What brings you here? *
                 </label>
                 <select
                   id="serviceType"
                   name="serviceType"
                   value={formData.serviceType}
                   onChange={handleChange}
-                  className="w-full rounded-lg border-2 border-soft-blue-strong px-4 py-3 text-foreground transition-colors focus:outline-none focus:border-peach"
+                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
                 >
-                  <option value="individual-counseling">Individual Biblical Counseling</option>
-                  <option value="youth-counseling">Youth & Young Adult Counseling</option>
-                  <option value="family-counseling">Family Counseling & Coaching</option>
-                  <option value="speaking">Speaking & Workshops Inquiry</option>
-                  <option value="general">General Inquiry</option>
+                  <option value="individual-counseling">Individual Counseling</option>
+                  <option value="family-counseling">Family Counseling</option>
+                  <option value="youth-counseling">Youth Counseling</option>
+                  <option value="speaking-inquiry">Speaking Inquiry</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
+            </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full rounded-lg border-2 border-soft-blue-strong px-4 py-3 text-foreground placeholder-muted transition-colors focus:outline-none focus:border-peach resize-none"
-                  placeholder="Tell me about what you're looking for support with..."
-                />
-              </div>
+            <div className="mt-6">
+              <label htmlFor="message" className="block text-sm font-semibold text-slate-900">
+                Message *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                placeholder="Tell me a bit about what you're looking for..."
+                rows={6}
+                className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+              />
+            </div>
 
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-peach px-6 py-3 font-semibold text-white transition-colors hover:bg-peach-deep"
-              >
-                Send Message
-              </button>
-            </form>
-          )}
+            <button
+              type="submit"
+              className="mt-8 w-full rounded-2xl bg-[var(--peach)] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] hover:bg-[var(--peach-deep)] hover:-translate-y-0.5 transition-all sm:w-auto"
+            >
+              {submitted ? 'Message Sent!' : 'Send Message'}
+            </button>
+
+            {submitted && (
+              <p className="mt-4 rounded-lg bg-green-50 p-4 text-green-800">
+                Thank you for reaching out! I&apos;ll be in touch shortly.
+              </p>
+            )}
+          </form>
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="section-curve relative py-16 bg-soft-blue lg:py-24">
+      {/* Info Boxes */}
+      <section className="section-ribbon section-curve relative overflow-hidden py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground">Other Ways to Connect</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-xl bg-white p-8 text-center soft-card">
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Email</h3>
-              <p className="text-muted mb-4">
-                Reach out with any questions or to schedule a consultation.
-              </p>
-              <a
-                href="mailto:contact@toyinadefemi.com"
-                className="inline-block text-peach font-semibold hover:text-peach-deep transition-colors"
-              >
-                contact@toyinadefemi.com
-              </a>
-            </div>
-            <div className="rounded-xl bg-white p-8 text-center soft-card">
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Social Media</h3>
-              <p className="text-muted mb-4">
-                Connect with me for inspiration, resources, and updates.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <a href="#" className="text-peach hover:text-peach-deep transition-colors font-semibold">
-                  Instagram
-                </a>
-                <span className="text-line">|</span>
-                <a href="#" className="text-peach hover:text-peach-deep transition-colors font-semibold">
-                  Facebook
-                </a>
-              </div>
-            </div>
-            <div className="rounded-xl bg-white p-8 text-center soft-card">
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Virtual Sessions</h3>
-              <p className="text-muted mb-4">
-                All sessions are conducted securely online for your convenience.
-              </p>
-              <p className="text-sm text-muted italic">
-                Confidentiality is always protected.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Booking Info */}
-      <section className="section-curve relative py-16 lg:py-24">
-        <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <h2 className="mb-8 text-3xl font-bold text-foreground text-center">About Sessions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Session Length & Cost</h3>
-              <div className="space-y-3">
-                <p className="text-muted leading-relaxed">
-                  <span className="font-semibold text-foreground">Individual Counseling:</span> 60 minutes
-                </p>
-                <p className="text-muted leading-relaxed">
-                  <span className="font-semibold text-foreground">Family Sessions:</span> 60 minutes
-                </p>
-                <p className="text-muted leading-relaxed">
-                  <span className="font-semibold text-foreground">Crisis/Intensive Support:</span> 75 minutes
-                </p>
-                <p className="text-muted mt-4 italic">
-                  Pricing details will be discussed during your initial consultation.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Payment & Financial Support</h3>
-              <p className="text-muted leading-relaxed mb-4">
-                A limited number of reduced-rate sessions are available for individuals and families 
-                experiencing financial hardship. We work together to find a solution that serves you best.
-              </p>
-              <p className="text-muted font-semibold">Payment methods accepted:</p>
-              <ul className="mt-3 space-y-2 text-muted">
-                <li>• Debit & Credit Cards</li>
-                <li>• PayPal</li>
-                <li>• CashApp</li>
-                <li>• Zelle</li>
-                <li>• Apple Pay</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Insurance & Superbills</h3>
-              <p className="text-muted leading-relaxed">
-                Insurance is not accepted directly, but superbills can be provided for reimbursement 
-                depending on your plan. Please contact me to discuss options.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="mb-3 text-xl font-semibold text-foreground">Cancellation & Rescheduling</h3>
-              <p className="text-muted leading-relaxed">
-                I understand that life happens. If you need to reschedule, please provide at least 
-                24 hours notice. Cancellations made with less notice may be subject to a session fee.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="section-curve relative py-16 bg-soft-blue-strong text-center lg:py-24">
-        <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <h2 className="mb-6 text-3xl font-bold text-foreground">
-            Ready to Take the Next Step?
+          <h2 className="section-title mx-auto w-fit text-center text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl mb-14">
+            Additional Information
           </h2>
-          <p className="mb-10 text-lg text-muted leading-relaxed">
-            Healing is possible, and I'm here to walk with you. Fill out the form above or reach out directly 
-            to begin your journey toward wholeness.
-          </p>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Session Rates</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                Individual sessions start at $80-150/hour depending on location and format. Family sessions and group workshops available.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Session Format</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                Sessions are available in-person or via secure video conferencing. Initial consultations are complimentary.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Payment Methods</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                We accept all major credit cards, PayPal, and bank transfers. Insurance may cover services.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Cancellation Policy</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                Cancellations made 48 hours in advance receive a full refund. Late cancellations may incur a fee.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Confidentiality</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                All sessions are confidential. I maintain professional standards and follow ethical guidelines.
+              </p>
+            </article>
+
+            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
+              <h3 className="text-2xl font-semibold text-slate-900">Response Time</h3>
+              <div className="mt-6 h-px w-20 bg-slate-200" />
+              <p className="mt-6 text-base leading-7 text-slate-600">
+                I typically respond to inquiries within 24-48 hours. For urgent matters, please call directly.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
-    </main>
+
+      {/* Contact Details */}
+      <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+            Other Ways to Connect
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            Whether you have questions, want to book a session, or are interested in speaking opportunities, I&apos;m here to help.
+          </p>
+
+          <div className="mt-12 space-y-6 text-left sm:max-w-md sm:mx-auto">
+            <div>
+              <h3 className="font-semibold text-slate-900">Email</h3>
+              <p className="mt-2 text-slate-600">hello@toyinadefemi.com</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-slate-900">Phone</h3>
+              <p className="mt-2 text-slate-600">(555) 123-4567</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-slate-900">Social Media</h3>
+              <p className="mt-2 text-slate-600">Follow for resources and updates</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
