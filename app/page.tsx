@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const navigation = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Resources", href: "#resources" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/work-with-me" },
+  { label: "Speaking", href: "/speaking" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const services = [
