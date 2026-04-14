@@ -133,17 +133,24 @@ textarea {
   left: calc(100% + 1rem);
 }
 
+.hero-mask {
+  min-height: 100vh;
+}
+
 .hero-mask::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(253, 252, 248, 0.98) 0%,
-    rgba(253, 252, 248, 0.94) 30%,
-    rgba(253, 252, 248, 0.54) 58%,
-    rgba(253, 252, 248, 0.06) 100%
+    rgba(253, 252, 248, 0.99) 0%,
+    rgba(253, 252, 248, 0.92) 25%,
+    rgba(253, 252, 248, 0.7) 45%,
+    rgba(253, 252, 248, 0.35) 65%,
+    rgba(253, 252, 248, 0.08) 85%,
+    transparent 100%
   );
+  pointer-events: none;
 }
 
 .hero-mask > * {

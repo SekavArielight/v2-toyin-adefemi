@@ -114,7 +114,7 @@ export default function Home() {
   return (
     <main id="top" className="page-glow min-h-screen">
       <header className="sticky top-0 z-50 border-b border-white/70 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10">
           <a href="#top" className="flex items-center gap-3">
             <Image
               src="/images/logo.png"
@@ -122,7 +122,7 @@ export default function Home() {
               width={190}
               height={68}
               priority
-              className="h-auto w-[150px] md:w-[190px]"
+              className="h-auto w-[120px] md:w-[150px]"
             />
           </a>
           <nav className="hidden items-center gap-8 text-sm text-slate-700 md:flex">
@@ -170,9 +170,19 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden">
-        <div className="hero-mask relative mx-auto grid max-w-7xl gap-8 px-6 pb-20 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-28 lg:pt-20">
-          <div className="max-w-2xl py-6 lg:py-12">
+      <section className="relative -mt-px min-h-screen overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-mountain.jpg"
+            alt="Calming mountain landscape"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="hero-mask relative mx-auto grid max-w-7xl gap-8 px-6 pb-20 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-28 lg:pt-24">
+          <div className="flex max-w-2xl flex-col justify-center py-12 lg:py-20">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">
               Trauma-informed, Scripture-centered care
             </p>
@@ -205,15 +215,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] soft-card sm:min-h-[520px]">
-            <Image
-              src="/images/hero-mountain.jpg"
-              alt="Calming mountain landscape"
-              fill
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
-            />
-          </div>
+          <div className="hidden lg:block" />
         </div>
       </section>
 
