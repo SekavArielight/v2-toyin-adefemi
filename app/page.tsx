@@ -171,12 +171,12 @@ export default function Home() {
       </header>
 
       <section className="relative -mt-px min-h-screen overflow-hidden bg-slate-50">
-        <div className="absolute inset-y-0 right-0 w-3/5">
+        <div className="hero-bg-image absolute inset-0">
           <Image
             src="/images/hero-mountain.jpg"
             alt="Calming mountain landscape"
             fill
-            sizes="(max-width: 768px) 100vw, 60vw"
+            sizes="100vw"
             className="object-cover"
             priority
           />
