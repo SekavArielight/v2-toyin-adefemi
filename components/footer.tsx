@@ -1,81 +1,77 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
-const footerLinks = [
-  {
-    title: "Navigation",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
-      { label: "Services", href: "/work-with-me" },
-      { label: "Speaking", href: "/speaking" },
-    ],
-  },
-  {
-    title: "Connect",
-    links: [
-      { label: "Book a Session", href: "/contact" },
-      { label: "Speaking Inquiries", href: "/speaking" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
+const navigationLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/work-with-me" },
+  { label: "Resources", href: "/speaking" },
+  { label: "Contact", href: "/contact" },
+];
+
+const socialLinks = [
+  { icon: "facebook", href: "https://facebook.com" },
+  { icon: "instagram", href: "https://instagram.com" },
+  { icon: "linkedin", href: "https://linkedin.com" },
 ];
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="page-glow mt-auto border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid gap-12 md:grid-cols-3">
-          {/* Brand */}
-          <div className="flex flex-col justify-between">
-            <div>
-              <h3 className="text-lg font-semibold text-slate-900">
-                Toyin Adefemi Counsels
-              </h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Biblical counseling for healing, identity, and restoration.
-              </p>
-            </div>
+    <footer className="bg-slate-700 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="Toyin Adefemi Counsels"
+              width={190}
+              height={68}
+              className="h-auto w-[140px]"
+            />
           </div>
 
-          {/* Links */}
-          {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h4 className="text-sm font-semibold uppercase tracking-widest text-slate-700">
-                {column.title}
-              </h4>
-              <nav className="mt-4 flex flex-col gap-3">
-                {column.links.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-sm text-slate-600 hover:text-[var(--peach)] hover:font-medium transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          ))}
+          {/* Navigation */}
+          <nav className="flex items-center justify-center gap-6 text-sm md:gap-8">
+            {navigationLinks.map((link, index) => (
+              <div key={link.label} className="flex items-center gap-6">
+                <Link
+                  href={link.href}
+                  className="text-white hover:text-slate-200 transition-colors"
+                >
+                  {link.label}
+                </Link>
+                {index < navigationLinks.length - 1 && (
+                  <span className="text-slate-400">|</span>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex gap-6">
+            {[
+              { label: "Facebook", icon: "f", href: "#" },
+              { label: "Instagram", icon: "@", href: "#" },
+              { label: "LinkedIn", icon: "in", href: "#" },
+            ].map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-600 text-white hover:bg-slate-500 transition-colors"
+                aria-label={social.label}
+              >
+                <span className="text-sm font-semibold">{social.icon}</span>
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Divider */}
-        <div className="my-12 h-px bg-slate-200" />
-
         {/* Copyright */}
-        <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-600 sm:flex-row">
-          <p>&copy; {currentYear} Toyin Adefemi. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/contact" className="hover:text-[var(--peach)]">
-              Privacy Policy
-            </Link>
-            <Link href="/contact" className="hover:text-[var(--peach)]">
-              Terms of Service
-            </Link>
-          </div>
+        <div className="mt-8 border-t border-slate-600 pt-6 text-center text-sm text-slate-300">
+          © 2022 Toyin Adefemi Counseling Services. All rights reserved.
         </div>
       </div>
     </footer>
