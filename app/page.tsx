@@ -170,13 +170,13 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative -mt-px min-h-screen overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative -mt-px min-h-screen overflow-hidden bg-slate-50">
+        <div className="absolute inset-y-0 right-0 w-3/5">
           <Image
             src="/images/hero-mountain.jpg"
             alt="Calming mountain landscape"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 60vw"
             className="object-cover"
             priority
           />
