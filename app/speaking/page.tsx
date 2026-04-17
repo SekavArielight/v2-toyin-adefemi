@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Speaking() {
   const topics = [
     {
@@ -48,7 +50,8 @@ export default function Speaking() {
       {/* About Speaking */}
       <section className="section-curve relative overflow-hidden py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-4xl">
+          <div className="grid gap-12 lg:grid-cols-[1fr_340px]">
+          <div className="mx-auto w-full">
             <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
               Why Invite Me to Speak?
             </h2>
@@ -85,6 +88,17 @@ export default function Speaking() {
                   </p>
                 </article>
               ))}
+            </div>
+            </div>
+
+            <div className="hidden overflow-hidden rounded-2xl lg:block">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-dCqoaTNJVeM70U4Qc1GKNm43ui8E1i.png"
+                alt="Group of young people united together"
+                width={400}
+                height={500}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

@@ -71,7 +71,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 border-t border-slate-600 pt-6 text-center text-sm text-slate-300">
-          © 2022 Toyin Adefemi Counseling Services. All rights reserved.
+          © 2026 Toyin Adefemi Counseling Services. All rights reserved.
         </div>
       </div>
     </footer>

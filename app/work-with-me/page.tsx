@@ -174,7 +174,17 @@ export default function WorkWithMe() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-sky-100 to-cyan-100 p-8">
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-sky-100 to-cyan-100">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/26-PwWPeoe46kjSAdeacF0RYjRUp10NEi.png"
+                alt="Group support session with counselor"
+                width={600}
+                height={400}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8">
               <h3 className="text-2xl font-semibold text-slate-900">
                 I Serve
               </h3>
