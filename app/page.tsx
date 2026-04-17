@@ -290,17 +290,73 @@ export default function Home() {
       </section>
 
       <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="section-title mx-auto w-fit text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="section-title mx-auto w-fit text-center text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
             Stories of Healing
           </h2>
-          <div className="soft-card mt-12 rounded-[2rem] bg-white px-8 py-10 sm:px-12">
-            <p className="text-3xl leading-10 text-slate-600 sm:text-4xl">
-              &quot;Clients describe Toyin&apos;s counseling as compassionate,
-              grounding, and deeply Spirit-led - a place where they feel
-              understood, supported, and guided toward emotional and spiritual
-              wholeness.&quot;
-            </p>
+          <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_340px]">
+            <div className="soft-card rounded-[2rem] bg-white px-8 py-10 sm:px-12">
+              <p className="text-3xl leading-10 text-slate-600 sm:text-4xl">
+                &quot;Clients describe Toyin&apos;s counseling as compassionate,
+                grounding, and deeply Spirit-led - a place where they feel
+                understood, supported, and guided toward emotional and spiritual
+                wholeness.&quot;
+              </p>
+            </div>
+            <div className="hidden overflow-hidden rounded-2xl lg:block">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-li3GcnQ3vztHrPIVBrBg3DjIm6MTQp.png"
+                alt="Supportive hands coming together"
+                width={400}
+                height={500}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-ribbon section-curve px-6 py-24 lg:px-10 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="section-title mx-auto w-fit text-center text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl mb-12">
+            Why Clients Choose Toyin
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Trauma-Informed Expertise",
+                description: "Trained in trauma-focused approaches with deep understanding of how past wounds affect present behavior and identity.",
+              },
+              {
+                title: "Biblical Foundation",
+                description: "Every session is grounded in Scripture and Christ's example of compassionate, redemptive love.",
+              },
+              {
+                title: "Youth Specialist",
+                description: "Special focus on teen and young adult development, identity formation, and life transitions.",
+              },
+              {
+                title: "Safe & Confidential",
+                description: "Create emotionally safe environments where clients feel fully seen, heard, and respected without judgment.",
+              },
+              {
+                title: "Practical Tools",
+                description: "Learn evidence-based emotional regulation, communication skills, and resilience strategies.",
+              },
+              {
+                title: "Culturally Responsive",
+                description: "Honor diverse backgrounds, experiences, and perspectives in all counseling and teaching work.",
+              },
+            ].map((reason) => (
+              <article key={reason.title} className="rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-[0_12px_30px_rgba(95,145,163,0.1)] backdrop-blur">
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {reason.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {reason.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

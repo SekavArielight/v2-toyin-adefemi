@@ -65,19 +65,31 @@ export default function About() {
       {/* My Calling */}
       <section className="section-ribbon section-curve relative overflow-hidden py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-              My Calling
-            </h2>
-            <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
-            
-            <p className="mt-8 text-lg leading-8 text-slate-600">
-              My calling is simple: To help young people and families experience healing, identity, and transformation through Christ-centered, trauma-informed care.
-            </p>
+          <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
+            <div className="mx-auto w-full max-w-4xl">
+              <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+                My Calling
+              </h2>
+              <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
+              
+              <p className="mt-8 text-lg leading-8 text-slate-600">
+                My calling is simple: To help young people and families experience healing, identity, and transformation through Christ-centered, trauma-informed care.
+              </p>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              I am passionate about creating emotionally safe environments where clients can process their stories, rebuild confidence, and step boldly into their purpose. Whether I&apos;m counseling a teen, supporting a young adult, or guiding a family, my heart is to reflect the love, truth, and gentleness of Jesus.
-            </p>
+              <p className="mt-6 text-lg leading-8 text-slate-600">
+                I am passionate about creating emotionally safe environments where clients can process their stories, rebuild confidence, and step boldly into their purpose. Whether I&apos;m counseling a teen, supporting a young adult, or guiding a family, my heart is to reflect the love, truth, and gentleness of Jesus.
+              </p>
+            </div>
+
+            <div className="hidden overflow-hidden rounded-2xl lg:block">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-7yYIx322NN3alyDRHYP1qeih63lrri.png"
+                alt="Counselor in conversation with client"
+                width={400}
+                height={500}
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -55,17 +56,19 @@ export default function Contact() {
 
       {/* Contact Form Section */}
       <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-              Book a Session or Send a Message
-            </h2>
-            <p className="mt-4 text-lg text-slate-600">
-              Fill out the form below and I&apos;ll be in touch shortly to discuss how I can support you.
-            </p>
-          </div>
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 lg:grid-cols-[1fr_360px]">
+            <div>
+              <div className="mb-12">
+                <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+                  Book a Session or Send a Message
+                </h2>
+                <p className="mt-4 text-lg text-slate-600">
+                  Fill out the form below and I&apos;ll be in touch shortly to discuss how I can support you.
+                </p>
+              </div>
 
-          <form
+              <form
             onSubmit={handleSubmit}
             className="soft-card rounded-[2rem] border border-slate-100 bg-white p-8 sm:p-12"
           >
@@ -165,7 +168,19 @@ export default function Contact() {
                 Thank you for reaching out! I&apos;ll be in touch shortly.
               </p>
             )}
-          </form>
+              </form>
+            </div>
+
+            <div className="hidden overflow-hidden rounded-2xl lg:block">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-fgR87BYYUgnFWQ7OQreQiVYX0pt9WW.png"
+                alt="Young woman on video call"
+                width={400}
+                height={500}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
