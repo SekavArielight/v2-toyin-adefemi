@@ -11,199 +11,206 @@ export default function About() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="section-ribbon section-curve relative overflow-hidden py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
-              Meet Your Counselor
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Toyin Adefemi
-            </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              Biblical Counselor • Youth Mental Health Coach • Trauma-Informed Practitioner
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About Toyin Section */}
-      <section className="section-curve relative overflow-hidden py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[360px_1fr] lg:px-10">
-          <div className="soft-card relative mx-auto w-full max-w-[320px] overflow-hidden rounded-[2rem] border-[8px] border-white bg-white">
-            <Image
-              src="/images/toyin-portrait.jpg"
-              alt="Portrait of Toyin Adefemi"
-              width={1000}
-              height={1250}
-              className="h-auto w-full"
-            />
-          </div>
-
-          <div>
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-              My Heart for Healing
-            </h2>
-            <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
-            
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              I&apos;m Toyin Adefemi — a Biblical Counselor, youth advocate, and emotional wellness practitioner called to walk alongside young people and families as they heal, grow, and rediscover their God-given identity. My work is rooted in compassion, Scripture, and a deep belief that emotional and spiritual restoration is possible for every person.
-            </p>
-
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-              For over a decade, I&apos;ve served youth, young adults, and families navigating trauma, identity confusion, emotional wounds, and life transitions. My approach blends clinical insight, biblical truth, and Spirit-led wisdom, creating a safe space where clients feel seen, supported, and strengthened.
-            </p>
-
-            <blockquote className="mt-8 max-w-2xl text-2xl leading-10 text-slate-700 italic sm:text-3xl">
-              &quot;Healing is not just about overcoming pain — it&apos;s about becoming who God designed you to be.&quot;
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* My Calling */}
-      <section className="section-ribbon section-curve relative overflow-hidden py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
-            <div className="mx-auto w-full max-w-4xl">
-              <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-                My Calling
-              </h2>
-              <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
-              
-              <p className="mt-8 text-lg leading-8 text-slate-600">
-                My calling is simple: To help young people and families experience healing, identity, and transformation through Christ-centered, trauma-informed care.
+      {/* Magazine-Style Hero Section */}
+      <section className="relative overflow-hidden bg-white px-6 py-32 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1fr_480px] lg:items-center">
+            {/* Text: Bold Typographic Treatment */}
+            <div>
+              <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+                About
               </p>
-
-              <p className="mt-6 text-lg leading-8 text-slate-600">
-                I am passionate about creating emotionally safe environments where clients can process their stories, rebuild confidence, and step boldly into their purpose. Whether I&apos;m counseling a teen, supporting a young adult, or guiding a family, my heart is to reflect the love, truth, and gentleness of Jesus.
+              <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl lg:text-8xl">
+                Toyin <span className="block text-[var(--peach)]">Adefemi</span>
+              </h1>
+              <p className="mt-8 max-w-xl text-2xl leading-relaxed text-slate-600">
+                Biblical Counselor, Youth Advocate, Emotional Wellness Practitioner
+              </p>
+              <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
+                I help young people and families heal, grow, and step boldly into their God-given identity through Christ-centered, trauma-informed care rooted in compassion and Scripture.
               </p>
             </div>
 
-            <div className="hidden overflow-hidden rounded-2xl lg:block">
+            {/* Large Portrait Image */}
+            <div className="relative h-[500px] overflow-hidden rounded-[3rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-7yYIx322NN3alyDRHYP1qeih63lrri.png"
-                alt="Counselor in conversation with client"
-                width={400}
-                height={500}
-                className="h-full w-full object-cover"
+                src="/images/toyin-portrait.jpg"
+                alt="Portrait of Toyin Adefemi"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Credentials & Training */}
-      <section className="section-curve relative overflow-hidden py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-              Professional Background
-            </h2>
-            <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
-            
-            <p className="mt-8 text-lg leading-8 text-slate-600">
-              I bring a unique blend of biblical counseling, mental health coaching, and emotional intelligence training to every session.
-            </p>
+      {/* My Heart for Healing — Asymmetric Layout */}
+      <section className="relative bg-slate-50 px-6 py-28 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-20 lg:grid-cols-[480px_1fr] lg:items-start">
+            {/* Portrait on Left for Variety */}
+            <div className="order-2 lg:order-1">
+              <div className="sticky top-32 space-y-6">
+                <h2 className="text-5xl font-bold leading-tight text-slate-900">
+                  My Heart<br />for Healing
+                </h2>
+                <div className="h-1 w-20 bg-[var(--peach)]" />
+              </div>
+            </div>
 
-            <div className="mt-10">
-              <h3 className="text-2xl font-semibold text-slate-900">Credentials & Training</h3>
-              <ul className="mt-6 space-y-4">
-                {credentials.map((credential) => (
-                  <li key={credential} className="flex gap-4">
-                    <div className="flex-shrink-0 pt-1">
-                      <svg
-                        className="h-6 w-6 text-[var(--peach)]"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-lg text-slate-600">{credential}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Content on Right */}
+            <div className="order-1 space-y-8 lg:order-2">
+              <p className="text-xl leading-8 text-slate-600">
+                I&apos;m Toyin Adefemi — a Biblical Counselor, youth advocate, and emotional wellness practitioner called to walk alongside young people and families as they heal, grow, and rediscover their God-given identity. My work is rooted in compassion, Scripture, and a deep belief that emotional and spiritual restoration is possible for every person.
+              </p>
+
+              <p className="text-xl leading-8 text-slate-600">
+                For over a decade, I&apos;ve served youth, young adults, and families navigating trauma, identity confusion, emotional wounds, and life transitions. My approach blends clinical insight, biblical truth, and Spirit-led wisdom, creating a safe space where clients feel seen, supported, and strengthened.
+              </p>
+
+              <blockquote className="border-l-4 border-[var(--peach)] pl-6 text-2xl font-light leading-10 text-slate-800">
+                &quot;Healing is not just about overcoming pain — it&apos;s about becoming who God designed you to be.&quot;
+              </blockquote>
             </div>
           </div>
         </div>
       </section>
 
-      {/* My Approach */}
-      <section className="section-ribbon section-curve relative overflow-hidden py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-              My Approach
-            </h2>
-            <div className="mt-6 h-px w-full max-w-xs bg-[var(--line)]" />
-            
-            <p className="mt-8 text-lg leading-8 text-slate-600">
-              My counseling approach integrates biblical truth with evidence-based emotional and behavioral tools. Every session is designed to honor your story, support your healing, and help you walk confidently in your God-given identity.
-            </p>
+      {/* My Calling — Flipped Asymmetric */}
+      <section className="relative bg-white px-6 py-28 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-20 lg:grid-cols-[1fr_440px]">
+            {/* Content */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-5xl font-bold leading-tight text-slate-900">
+                  My Calling
+                </h2>
+                <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
+              </div>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                {
-                  title: "Biblical Foundation",
-                  description: "Rooted in Scripture and the heart of Christ.",
-                },
-                {
-                  title: "Trauma-Informed Care",
-                  description: "Safety, compassion, and emotional wisdom in every step.",
-                },
-                {
-                  title: "Practical Tools",
-                  description: "Emotional regulation, mindset renewal, and resilient next steps.",
-                },
-              ].map((pillar) => (
-                <article
-                  key={pillar.title}
-                  className="rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-[0_12px_30px_rgba(95,145,163,0.1)] backdrop-blur"
+              <p className="text-xl leading-8 text-slate-600">
+                My calling is simple: To help young people and families experience healing, identity, and transformation through Christ-centered, trauma-informed care.
+              </p>
+
+              <p className="text-xl leading-8 text-slate-600">
+                I am passionate about creating emotionally safe environments where clients can process their stories, rebuild confidence, and step boldly into their purpose. Whether I&apos;m counseling a teen, supporting a young adult, or guiding a family, my heart is to reflect the love, truth, and gentleness of Jesus.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[500px] overflow-hidden rounded-[2rem]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-7yYIx322NN3alyDRHYP1qeih63lrri.png"
+                alt="Counselor in conversation with client"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Background with Badge Pills */}
+      <section className="relative bg-slate-50 px-6 py-28 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-5xl font-bold tracking-tight text-slate-900">
+            Professional Background
+          </h2>
+          <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
+
+          <p className="mt-10 text-xl leading-8 text-slate-600">
+            I bring a unique blend of biblical counseling, mental health coaching, and emotional intelligence training to every session.
+          </p>
+
+          <div className="mt-12">
+            <h3 className="mb-8 text-2xl font-bold text-slate-900">Credentials & Training</h3>
+            <div className="flex flex-wrap gap-3">
+              {credentials.map((credential) => (
+                <span
+                  key={credential}
+                  className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-700 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-slate-100"
                 >
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    {pillar.description}
-                  </p>
-                </article>
+                  {credential}
+                </span>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-            Ready to Begin?
+      {/* My Approach with Accent Border Cards */}
+      <section className="relative bg-white px-6 py-28 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-5xl font-bold tracking-tight text-slate-900">
+            My Approach to Healing
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-            If you&apos;re ready to start your healing journey, I&apos;d be honored to walk with you.
+          <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
+
+          <p className="mt-10 max-w-3xl text-xl leading-8 text-slate-600">
+            My counseling approach integrates biblical truth with evidence-based emotional and behavioral tools. Every session is designed to honor your story, support your healing, and help you walk confidently in your God-given identity.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Biblical Foundation",
+                description: "Rooted in Scripture and the heart of Christ — every conversation anchored in God&apos;s truth and redemptive love.",
+              },
+              {
+                title: "Trauma-Informed Care",
+                description: "Safety, compassion, and emotional wisdom — creating brave spaces where healing can take root and flourish.",
+              },
+              {
+                title: "Practical Tools",
+                description: "Emotional regulation, mindset renewal, and resilient next steps — equipping you for lasting transformation.",
+              },
+            ].map((pillar) => (
+              <article
+                key={pillar.title}
+                className="border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
+              >
+                <h3 className="text-2xl font-bold text-slate-900">
+                  {pillar.title}
+                </h3>
+                <p className="mt-4 leading-7 text-slate-600">
+                  {pillar.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Warm, Intentional CTA Closing */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 to-white px-6 py-32 lg:px-10 lg:py-48">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-5xl font-bold leading-tight text-slate-900 sm:text-6xl">
+            Let&apos;s Begin Your Journey
+          </h2>
+          <p className="mt-8 text-2xl leading-relaxed text-slate-600">
+            If you&apos;re ready to experience healing, discover your identity, and step boldly into your purpose, I&apos;d be honored to walk alongside you. Let&apos;s create a safe space where your story matters and your growth is possible.
+          </p>
+
+          <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row sm:justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl bg-[var(--peach)] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] hover:bg-[var(--peach-deep)] hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-2xl bg-[var(--peach)] px-10 py-4 text-lg font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] hover:bg-[var(--peach-deep)] hover:-translate-y-0.5 transition-all"
             >
               Book a Session
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-700 shadow-sm hover:border-slate-400 hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-10 py-4 text-lg font-semibold text-slate-700 shadow-sm hover:border-slate-400 hover:bg-slate-50 transition-all"
             >
               Get in Touch
             </a>
           </div>
+
+          <p className="mt-10 text-sm text-slate-500">
+            Ready to talk? You can also call or email to schedule your first session.
+          </p>
         </div>
       </section>
     </>

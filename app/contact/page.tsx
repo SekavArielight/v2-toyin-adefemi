@@ -37,40 +37,27 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="section-ribbon section-curve relative overflow-hidden py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
-              Get in Touch
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Let's Connect
-            </h1>
-            <p className="mt-4 text-lg text-slate-600">
-              I&apos;m here to support your healing journey. Reach out with questions or to book a session.
-            </p>
-          </div>
+      {/* Warm Editorial Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 to-white px-6 py-36 lg:px-10 lg:py-48">
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+            Get in Touch
+          </p>
+          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl">
+            Let&apos;s Connect
+          </h1>
+          <p className="mx-auto mt-8 max-w-2xl text-2xl leading-relaxed text-slate-600">
+            I&apos;m here to support your healing journey. Reach out with questions or to book a session—I respond within 24-48 hours.
+          </p>
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 lg:grid-cols-[1fr_360px]">
-            <div>
-              <div className="mb-12">
-                <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-                  Book a Session or Send a Message
-                </h2>
-                <p className="mt-4 text-lg text-slate-600">
-                  Fill out the form below and I&apos;ll be in touch shortly to discuss how I can support you.
-                </p>
-              </div>
-
-              <form
+      {/* Contact Form — Visual Centerpiece */}
+      <section className="relative bg-white px-6 py-32 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-2xl">
+          <form
             onSubmit={handleSubmit}
-            className="soft-card rounded-[2rem] border border-slate-100 bg-white p-8 sm:p-12"
+            className="rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_12px_40px_rgba(0,0,0,0.08)] sm:p-14"
           >
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
@@ -85,7 +72,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Your name"
-                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                  className="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none placeholder:text-slate-400 transition-all focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                 />
               </div>
               <div>
@@ -100,7 +87,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="your@email.com"
-                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                  className="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none placeholder:text-slate-400 transition-all focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                 />
               </div>
             </div>
@@ -117,7 +104,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="(555) 123-4567"
-                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                  className="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none placeholder:text-slate-400 transition-all focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                 />
               </div>
               <div>
@@ -129,7 +116,7 @@ export default function Contact() {
                   name="serviceType"
                   value={formData.serviceType}
                   onChange={handleChange}
-                  className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                  className="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition-all focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
                 >
                   <option value="individual-counseling">Individual Counseling</option>
                   <option value="family-counseling">Family Counseling</option>
@@ -152,120 +139,140 @@ export default function Contact() {
                 required
                 placeholder="Tell me a bit about what you're looking for..."
                 rows={6}
-                className="mt-3 w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-700 outline-none placeholder:text-slate-400 focus:border-sky-300 focus:ring-1 focus:ring-sky-300"
+                className="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none placeholder:text-slate-400 transition-all focus:border-sky-400 focus:ring-2 focus:ring-sky-100"
               />
             </div>
 
             <button
               type="submit"
-              className="mt-8 w-full rounded-2xl bg-[var(--peach)] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] hover:bg-[var(--peach-deep)] hover:-translate-y-0.5 transition-all sm:w-auto"
+              className="mt-8 w-full rounded-xl bg-[var(--peach)] px-6 py-4 text-base font-semibold text-white shadow-[0_12px_24px_rgba(254,143,104,0.3)] transition-all hover:bg-[var(--peach-deep)] hover:-translate-y-0.5"
             >
               {submitted ? 'Message Sent!' : 'Send Message'}
             </button>
 
             {submitted && (
-              <p className="mt-4 rounded-lg bg-green-50 p-4 text-green-800">
+              <p className="mt-4 rounded-lg bg-green-50 p-4 text-sm text-green-800">
                 Thank you for reaching out! I&apos;ll be in touch shortly.
               </p>
             )}
-              </form>
-            </div>
+          </form>
+        </div>
+      </section>
 
-            <div className="hidden overflow-hidden rounded-2xl lg:block">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-fgR87BYYUgnFWQ7OQreQiVYX0pt9WW.png"
-                alt="Young woman on video call"
-                width={400}
-                height={500}
-                className="h-full w-full object-cover"
-              />
-            </div>
+      {/* Atmospheric Image Break */}
+      <section className="relative bg-slate-50 px-6 py-0 lg:px-10">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
+          <div className="relative h-[350px] w-full md:h-[450px]">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-fgR87BYYUgnFWQ7OQreQiVYX0pt9WW.png"
+              alt="Young woman on video call"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      {/* Info Boxes */}
-      <section className="section-ribbon section-curve relative overflow-hidden py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 className="section-title mx-auto w-fit text-center text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl mb-14">
-            Additional Information
+      {/* Additional Info — Two-Column Grid */}
+      <section className="relative bg-white px-6 py-32 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-16 text-5xl font-bold tracking-tight text-slate-900">
+            What You Should Know
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Session Rates</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                Individual sessions start at $80-150/hour depending on location and format. Family sessions and group workshops available.
-              </p>
-            </article>
-
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Session Format</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                Sessions are available in-person or via secure video conferencing. Initial consultations are complimentary.
-              </p>
-            </article>
-
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Payment Methods</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                We accept all major credit cards, PayPal, and bank transfers. Insurance may cover services.
-              </p>
-            </article>
-
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Cancellation Policy</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                Cancellations made 48 hours in advance receive a full refund. Late cancellations may incur a fee.
-              </p>
-            </article>
-
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Confidentiality</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                All sessions are confidential. I maintain professional standards and follow ethical guidelines.
-              </p>
-            </article>
-
-            <article className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_16px_35px_rgba(95,145,163,0.1)] backdrop-blur">
-              <h3 className="text-2xl font-semibold text-slate-900">Response Time</h3>
-              <div className="mt-6 h-px w-20 bg-slate-200" />
-              <p className="mt-6 text-base leading-7 text-slate-600">
-                I typically respond to inquiries within 24-48 hours. For urgent matters, please call directly.
-              </p>
-            </article>
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                icon: "💰",
+                label: "Session Rates",
+                description: "Individual sessions start at $80-150/hour depending on location and format. Family sessions and group workshops available.",
+              },
+              {
+                icon: "🎯",
+                label: "Session Format",
+                description: "Sessions are available in-person or via secure video conferencing. Initial consultations are complimentary.",
+              },
+              {
+                icon: "💳",
+                label: "Payment Methods",
+                description: "We accept all major credit cards, PayPal, and bank transfers. Insurance may cover services.",
+              },
+              {
+                icon: "📋",
+                label: "Cancellation Policy",
+                description: "Cancellations made 48 hours in advance receive a full refund. Late cancellations may incur a fee.",
+              },
+              {
+                icon: "🔒",
+                label: "Confidentiality",
+                description: "All sessions are confidential. I maintain professional standards and follow ethical guidelines.",
+              },
+              {
+                icon: "⏱️",
+                label: "Response Time",
+                description: "I typically respond to inquiries within 24-48 hours. For urgent matters, please call directly.",
+              },
+            ].map((item) => (
+              <article key={item.label} className="border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                <div className="mb-4 text-3xl">{item.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  {item.label}
+                </h3>
+                <p className="mt-3 leading-7 text-slate-600">
+                  {item.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Details */}
-      <section className="section-curve section-curve-tight bg-white px-6 py-24 lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+      {/* Other Ways to Connect — Three Distinct Items */}
+      <section className="relative bg-slate-50 px-6 py-32 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-8 text-5xl font-bold tracking-tight text-slate-900">
             Other Ways to Connect
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mb-20 max-w-2xl text-xl text-slate-600">
             Whether you have questions, want to book a session, or are interested in speaking opportunities, I&apos;m here to help.
           </p>
 
-          <div className="mt-12 space-y-6 text-left sm:max-w-md sm:mx-auto">
-            <div>
-              <h3 className="font-semibold text-slate-900">Email</h3>
-              <p className="mt-2 text-slate-600">hello@toyinadefemi.com</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-slate-900">Phone</h3>
-              <p className="mt-2 text-slate-600">(555) 123-4567</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-slate-900">Social Media</h3>
-              <p className="mt-2 text-slate-600">Follow for resources and updates</p>
-            </div>
+          <div className="grid gap-12 md:grid-cols-3">
+            {[
+              {
+                icon: "✉️",
+                title: "Email",
+                detail: "hello@toyinadefemi.com",
+                description: "Send me a message anytime",
+              },
+              {
+                icon: "📞",
+                title: "Phone",
+                detail: "(555) 123-4567",
+                description: "Call for urgent matters",
+              },
+              {
+                icon: "🌐",
+                title: "Social Media",
+                detail: "@toyinadefemi",
+                description: "Follow for resources and updates",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex flex-col items-start gap-4 rounded-2xl bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                <div className="text-4xl">{item.icon}</div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-lg font-semibold text-[var(--peach)]">
+                    {item.detail}
+                  </p>
+                  <p className="mt-2 text-sm text-slate-600">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
