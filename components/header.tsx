@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -12,9 +13,11 @@ const navigation = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/70 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-10">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo.png"
@@ -25,48 +28,70 @@ export function Header() {
             className="h-auto w-[120px] md:w-[150px]"
           />
         </Link>
-        <nav className="hidden items-center gap-8 text-sm text-slate-700 md:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="border-b-2 border-transparent pb-1 hover:border-[var(--peach)] hover:text-slate-950"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-10 text-sm font-medium text-slate-700 md:flex">
+          {navigation.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`relative pb-1 transition-colors ${
+                  isActive ? 'text-slate-900' : 'hover:text-slate-900'
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[var(--peach)]" />
+                )}
+              </Link>
+            );
+          })}
         </nav>
-        <details className="mobile-nav relative md:hidden">
-          <summary className="flex h-11 w-11 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none">
-            <span className="sr-only">Toggle navigation menu</span>
-            <svg
-              viewBox="0 0 24 24"
-              className="h-5 w-5 transition-transform duration-200"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 7h16M4 12h16M4 17h16"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-            </svg>
-          </summary>
-          <div className="absolute right-0 top-[calc(100%+0.75rem)] w-[min(18rem,calc(100vw-3rem))] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_24px_50px_rgba(36,51,66,0.14)]">
-            <nav className="flex flex-col">
-              {navigation.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-950"
+        <div className="flex items-center gap-4">
+          <a
+            href="/contact"
+            className="hidden rounded-xl bg-[var(--peach)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_16px_rgba(254,143,104,0.3)] transition-all hover:bg-[var(--peach-deep)] hover:-translate-y-0.5 sm:inline-flex"
+          >
+            Book a Session
+          </a>
+          <details className="mobile-nav relative md:hidden">
+            <summary className="flex h-10 w-10 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none hover:bg-slate-50">
+              <span className="sr-only">Toggle navigation menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5 transition-transform duration-200"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 7h16M4 12h16M4 17h16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </summary>
+            <div className="absolute right-0 top-[calc(100%+0.75rem)] w-[min(18rem,calc(100vw-3rem))] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_24px_50px_rgba(36,51,66,0.14)]">
+              <nav className="flex flex-col">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-950"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <a
+                  href="/contact"
+                  className="mt-2 rounded-xl bg-[var(--peach)] px-4 py-3 text-sm font-semibold text-white text-center hover:bg-[var(--peach-deep)]"
                 >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </details>
+                  Book a Session
+                </a>
+              </nav>
+            </div>
+          </details>
+        </div>
       </div>
     </header>
   );
