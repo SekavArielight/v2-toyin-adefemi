@@ -72,23 +72,41 @@ const features = [
 ];
 
 const resources = [
-  { title: "Trauma-informed Worksheets", icon: "📋" },
-  { title: "Faith & Healing Resources", icon: "✨" },
-  { title: "Stress Relief Guides", icon: "🌿" },
+  { title: "Trauma-informed Worksheets", iconType: "document" },
+  { title: "Faith & Healing Resources", iconType: "star" },
+  { title: "Stress Relief Guides", iconType: "leaf" },
 ];
 
-export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
+function ResourceIcon({ type }: { type: string }) {
+  if (type === "document") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+      </svg>
+    );
+  }
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  if (type === "star") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-2.81 6.63L2 9.24l5.46 4.73L5.82 21z" />
+      </svg>
+    );
+  }
 
   return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+      <path d="M17.92 7.02C17.45 4.18 14.97 2 12 2c-2.97 0-5.45 2.18-5.92 5.02C3.97 7.55 2 9.69 2 12s1.97 4.45 4.08 4.98C6.55 19.82 9.03 22 12 22c2.97 0 5.45-2.18 5.92-5.02C20.03 16.45 22 14.31 22 12s-1.97-4.45-4.08-4.98zM12 20c-2.33 0-4.32-1.45-5.12-3.5h10.24c-.8 2.05-2.79 3.5-5.12 3.5zm0-14c2.33 0 4.32 1.45 5.12 3.5H6.88c.8-2.05 2.79-3.5 5.12-3.5z" />
+    </svg>
+  );
+}
+
+export default function Home() {
+  return (
     <>
-      {/* Hero Section — Full Screen, Editorial, Immersive */}
-      <section className="relative h-screen overflow-hidden bg-slate-50">
-        <div className="absolute inset-0">
+      {/* Hero Section */}
+      <section className="relative min-h-screen overflow-hidden bg-slate-50">
+        <div className="hero-bg-image absolute inset-0">
           <Image
             src="/images/hero-mountain.jpg"
             alt="Calming mountain landscape"
@@ -97,37 +115,42 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          {/* Soft Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-white/20" />
         </div>
-
-        {/* Content */}
-        <div className={`relative mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="max-w-3xl">
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--peach)]">
+        <div className="hero-mask relative mx-auto grid max-w-7xl gap-8 px-6 pb-20 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-28 lg:pt-24">
+          <div className="flex max-w-2xl flex-col justify-center py-12 lg:py-20">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">
               Trauma-informed, Scripture-centered care
             </p>
-            <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl lg:text-8xl">
-              Healing begins with <span className="italic text-[var(--peach)]">being fully seen.</span>
+            <h1 className="max-w-xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
+              Healing begins with a safe place to be fully seen.
             </h1>
-            <p className="mt-8 max-w-2xl text-2xl leading-relaxed text-slate-700">
-              Biblical counseling for youth, young adults, and families rooted in compassion, emotional wisdom, and Christ-centered restoration.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+              Biblical counseling for youth, young adults, and families rooted
+              in compassion, emotional wisdom, and Christ-centered restoration.
             </p>
-            <div className="mt-12 flex flex-col gap-5 sm:flex-row">
+            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-500 sm:text-lg">
+              Welcome to a space where young people and families can process
+              pain, rebuild identity, and experience emotional and spiritual
+              renewal. You do not have to navigate life&apos;s hardest seasons
+              alone.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-[var(--peach)] px-10 py-5 text-lg font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] transition-all hover:bg-[var(--peach-deep)] hover:-translate-y-1"
+                className="inline-flex items-center justify-center rounded-2xl bg-[var(--peach)] px-8 py-4 text-base font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] hover:bg-[var(--peach-deep)] hover:-translate-y-0.5"
               >
                 Book a Session
               </a>
               <a
                 href="/about"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-slate-400 bg-white px-10 py-5 text-lg font-semibold text-slate-900 transition-all hover:border-slate-500 hover:bg-slate-50"
+                className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-700 shadow-sm hover:border-slate-400 hover:bg-slate-50"
               >
                 Learn About Toyin
               </a>
             </div>
           </div>
+
+          <div className="hidden lg:block" />
         </div>
       </section>
 
@@ -343,7 +366,9 @@ export default function Home() {
                 key={resource.title}
                 className="rounded-[1.5rem] border border-white/80 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
               >
-                <div className="mb-4 text-4xl">{resource.icon}</div>
+                <div className="mb-4">
+                  <ResourceIcon type={resource.iconType} />
+                </div>
                 <h3 className="text-2xl font-bold text-slate-900">
                   {resource.title}
                 </h3>

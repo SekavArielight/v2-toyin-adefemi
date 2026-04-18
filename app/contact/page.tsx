@@ -3,6 +3,78 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+function InfoIcon({ type }: { type: string }) {
+  if (type === "money") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+      </svg>
+    );
+  }
+
+  if (type === "target") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+      </svg>
+    );
+  }
+
+  if (type === "card") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M20 8H4V4h16m0 12H4c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm-6 3.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zM4 6h16V4H4z" />
+      </svg>
+    );
+  }
+
+  if (type === "document") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6z" />
+      </svg>
+    );
+  }
+
+  if (type === "lock") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+      </svg>
+    );
+  }
+
+  if (type === "clock") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zm-7 0c0 .83-.67 1.5-1.5 1.5S5 12.83 5 12s.67-1.5 1.5-1.5 1.5.67 1.5 1.5z" />
+      </svg>
+    );
+  }
+
+  if (type === "email") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    );
+  }
+
+  if (type === "phone") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M17.92 7.02C17.45 4.18 14.97 2 12 2c-2.97 0-5.45 2.18-5.92 5.02C3.97 7.55 2 9.69 2 12s1.97 4.45 4.08 4.98C6.55 19.82 9.03 22 12 22c2.97 0 5.45-2.18 5.92-5.02C20.03 16.45 22 14.31 22 12s-1.97-4.45-4.08-4.98zM12 20c-2.33 0-4.32-1.45-5.12-3.5h10.24c-.8 2.05-2.79 3.5-5.12 3.5zm0-14c2.33 0 4.32 1.45 5.12 3.5H6.88c.8-2.05 2.79-3.5 5.12-3.5z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+    </svg>
+  );
+}
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -183,38 +255,40 @@ export default function Contact() {
           <div className="grid gap-8 md:grid-cols-2">
             {[
               {
-                icon: "💰",
+                iconType: "money",
                 label: "Session Rates",
                 description: "Individual sessions start at $80-150/hour depending on location and format. Family sessions and group workshops available.",
               },
               {
-                icon: "🎯",
+                iconType: "target",
                 label: "Session Format",
                 description: "Sessions are available in-person or via secure video conferencing. Initial consultations are complimentary.",
               },
               {
-                icon: "💳",
+                iconType: "card",
                 label: "Payment Methods",
                 description: "We accept all major credit cards, PayPal, and bank transfers. Insurance may cover services.",
               },
               {
-                icon: "📋",
+                iconType: "document",
                 label: "Cancellation Policy",
                 description: "Cancellations made 48 hours in advance receive a full refund. Late cancellations may incur a fee.",
               },
               {
-                icon: "🔒",
+                iconType: "lock",
                 label: "Confidentiality",
                 description: "All sessions are confidential. I maintain professional standards and follow ethical guidelines.",
               },
               {
-                icon: "⏱️",
+                iconType: "clock",
                 label: "Response Time",
                 description: "I typically respond to inquiries within 24-48 hours. For urgent matters, please call directly.",
               },
             ].map((item) => (
               <article key={item.label} className="border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
-                <div className="mb-4 text-3xl">{item.icon}</div>
+                <div className="mb-4">
+                  <InfoIcon type={item.iconType} />
+                </div>
                 <h3 className="text-xl font-bold text-slate-900">
                   {item.label}
                 </h3>
