@@ -109,18 +109,32 @@ export default function Contact() {
 
   return (
     <>
-      {/* Warm Editorial Hero */}
+      {/* Warm Editorial Hero with Image E */}
       <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 to-white px-6 py-36 lg:px-10 lg:py-48">
-        <div className="mx-auto max-w-6xl text-center">
-          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
-            Get in Touch
-          </p>
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl">
-            Let&apos;s Connect
-          </h1>
-          <p className="mx-auto mt-8 max-w-2xl text-2xl leading-relaxed text-slate-600">
-            I&apos;m here to support your healing journey. Reach out with questions or to book a session—I respond within 24-48 hours.
-          </p>
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1fr_420px] lg:items-center">
+            <div>
+              <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+                Get in Touch
+              </p>
+              <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl">
+                Let&apos;s Connect
+              </h1>
+              <p className="mt-8 max-w-2xl text-2xl leading-relaxed text-slate-600">
+                I&apos;m here to support your healing journey. Reach out with questions or to book a session—I respond within 24-48 hours.
+              </p>
+            </div>
+
+            {/* Image E - One-on-one counseling */}
+            <div className="relative h-[400px] overflow-hidden rounded-[2.5rem] lg:h-[500px]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-dnCZLZWgGkUpHyoAoybcm6nFZWCs7e.png"
+                alt="One-on-one counseling session, warm and inviting"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -231,16 +245,17 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Atmospheric Image Break */}
+      {/* Atmospheric Image Break with Image H */}
       <section className="relative bg-slate-50 px-6 py-0 lg:px-10">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
           <div className="relative h-[350px] w-full md:h-[450px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-fgR87BYYUgnFWQ7OQreQiVYX0pt9WW.png"
-              alt="Young woman on video call"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+              alt="Hands held together, warmth and connection"
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-sky-600/30" />
           </div>
         </div>
       </section>
@@ -301,52 +316,66 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Other Ways to Connect — Three Distinct Items */}
+      {/* Other Ways to Connect with Image B */}
       <section className="relative bg-slate-50 px-6 py-32 lg:px-10 lg:py-40">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-8 text-5xl font-bold tracking-tight text-slate-900">
-            Other Ways to Connect
-          </h2>
-          <p className="mb-20 max-w-2xl text-xl text-slate-600">
-            Whether you have questions, want to book a session, or are interested in speaking opportunities, I&apos;m here to help.
-          </p>
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1fr_380px]">
+            <div>
+              <h2 className="mb-8 text-5xl font-bold tracking-tight text-slate-900">
+                Other Ways to Connect
+              </h2>
+              <p className="mb-20 max-w-2xl text-xl text-slate-600">
+                Whether you have questions, want to book a session, or are interested in speaking opportunities, I&apos;m here to help.
+              </p>
 
-          <div className="grid gap-12 md:grid-cols-3">
-            {[
-              {
-                icon: "✉️",
-                title: "Email",
-                detail: "hello@toyinadefemi.com",
-                description: "Send me a message anytime",
-              },
-              {
-                icon: "📞",
-                title: "Phone",
-                detail: "(555) 123-4567",
-                description: "Call for urgent matters",
-              },
-              {
-                icon: "🌐",
-                title: "Social Media",
-                detail: "@toyinadefemi",
-                description: "Follow for resources and updates",
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex flex-col items-start gap-4 rounded-2xl bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
-                <div className="text-4xl">{item.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-lg font-semibold text-[var(--peach)]">
-                    {item.detail}
-                  </p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
+              <div className="grid gap-12 md:grid-cols-3">
+                {[
+                  {
+                    icon: "✉️",
+                    title: "Email",
+                    detail: "hello@toyinadefemi.com",
+                    description: "Send me a message anytime",
+                  },
+                  {
+                    icon: "📞",
+                    title: "Phone",
+                    detail: "(555) 123-4567",
+                    description: "Call for urgent matters",
+                  },
+                  {
+                    icon: "🌐",
+                    title: "Social Media",
+                    detail: "@toyinadefemi",
+                    description: "Follow for resources and updates",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex flex-col items-start gap-4 rounded-2xl bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                    <div className="text-4xl">{item.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-lg font-semibold text-[var(--peach)]">
+                        {item.detail}
+                      </p>
+                      <p className="mt-2 text-sm text-slate-600">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Image B - Young woman on sofa with phone and credit card */}
+            <div className="relative h-[500px] overflow-hidden rounded-[2rem] lg:h-[600px]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-SR2Pny7CUBZIaE9ttSN23NP452SGzd.png"
+                alt="Young woman on sofa, relaxed and accessible"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
