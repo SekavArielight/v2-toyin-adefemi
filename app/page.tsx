@@ -255,6 +255,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Emotional Connection Image - Image N */}
+      <section className="relative overflow-hidden px-6 py-0 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="scroll-animate relative h-64 overflow-hidden rounded-[2rem] md:h-80">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-icvWhFNHuWubzvdIxEbA6weFN6VE1D.webp"
+              alt="Woman being comforted, emotional support"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-sky-500/20" />
+          </div>
+        </div>
+      </section>
+
       {/* Approach Pillars — Horizontal Feature Blocks */}
       <section className="relative bg-white px-6 py-32 lg:px-10 lg:py-40">
         <div className="mx-auto max-w-5xl">
@@ -417,6 +432,21 @@ export default function Home() {
                 </p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Moment Image - Image O */}
+      <section className="relative overflow-hidden px-6 py-0 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="scroll-animate relative h-64 overflow-hidden rounded-[2rem] md:h-80">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-qxYYmROGfvWPzGZ6H45uFvz0OW9ybx.webp"
+              alt="Professional counseling moment, caring and attentive"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-emerald-500/20" />
           </div>
         </div>
       </section>

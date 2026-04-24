@@ -55,7 +55,7 @@ export function Header() {
             Book a Session
           </a>
           <details className="mobile-nav relative md:hidden">
-            <summary className="flex h-10 w-10 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none hover:bg-slate-50">
+            <summary className="flex h-10 w-10 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none hover:bg-slate-50 cursor-pointer">
               <span className="sr-only">Toggle navigation menu</span>
               <svg
                 viewBox="0 0 24 24"
@@ -71,14 +71,24 @@ export function Header() {
                 />
               </svg>
             </summary>
-            <div className="fixed inset-0 z-40 overflow-hidden bg-white/95 backdrop-blur-sm md:hidden">
-              <div className="flex h-full flex-col">
+            <div className="fixed inset-0 z-40 overflow-y-auto bg-white/95 backdrop-blur-sm md:hidden">
+              <div className="flex min-h-full flex-col">
                 {/* Close button area - matches header height */}
                 <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
                   <span className="text-sm font-semibold text-slate-600">Menu</span>
-                  <details open className="absolute" style={{ opacity: 0, pointerEvents: 'none' }}>
-                    <summary className="sr-only">Close menu</summary>
-                  </details>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      const details = (e.target as HTMLElement).closest('details');
+                      if (details) details.open = false;
+                    }}
+                    className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100"
+                    aria-label="Close menu"
+                  >
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
                 
                 {/* Navigation items */}
@@ -88,6 +98,10 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       className="rounded-xl px-4 py-4 text-lg font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-colors"
+                      onClick={(e) => {
+                        const details = (e.target as HTMLElement).closest('details');
+                        if (details) details.open = false;
+                      }}
                     >
                       {item.label}
                     </Link>
@@ -99,6 +113,10 @@ export function Header() {
                   <a
                     href="/contact"
                     className="block rounded-xl bg-[var(--peach)] px-6 py-4 text-center text-base font-semibold text-white shadow-[0_8px_16px_rgba(254,143,104,0.3)] hover:bg-[var(--peach-deep)] transition-all"
+                    onClick={(e) => {
+                      const details = (e.target as HTMLElement).closest('details');
+                      if (details) details.open = false;
+                    }}
                   >
                     Book a Session
                   </a>
