@@ -230,7 +230,7 @@ export default function About() {
       </section>
 
       {/* Hands-Held Visual Break Before Final CTA */}
-      <section className="relative overflow-hidden px-6 py-0 lg:px-10">
+      {/* <section className="relative overflow-hidden px-6 py-0 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="relative h-64 overflow-hidden rounded-[2rem] md:h-96">
             <Image
@@ -242,7 +242,7 @@ export default function About() {
             <div className="absolute inset-0 bg-sky-500/30" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Warm, Intentional CTA Closing with Image D */}
       <section className="relative overflow-hidden px-6 py-28 lg:px-10 lg:py-40">
