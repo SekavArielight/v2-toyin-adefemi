@@ -71,24 +71,39 @@ export function Header() {
                 />
               </svg>
             </summary>
-            <div className="absolute right-0 top-[calc(100%+0.75rem)] w-[min(18rem,calc(100vw-3rem))] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_24px_50px_rgba(36,51,66,0.14)]">
-              <nav className="flex flex-col">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-950"
+            <div className="fixed inset-0 z-40 overflow-hidden bg-white/95 backdrop-blur-sm md:hidden">
+              <div className="flex h-full flex-col">
+                {/* Close button area - matches header height */}
+                <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
+                  <span className="text-sm font-semibold text-slate-600">Menu</span>
+                  <details open className="absolute" style={{ opacity: 0, pointerEvents: 'none' }}>
+                    <summary className="sr-only">Close menu</summary>
+                  </details>
+                </div>
+                
+                {/* Navigation items */}
+                <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-8">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="rounded-xl px-4 py-4 text-lg font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+                
+                {/* CTA button at bottom */}
+                <div className="border-t border-slate-100 px-6 py-6">
+                  <a
+                    href="/contact"
+                    className="block rounded-xl bg-[var(--peach)] px-6 py-4 text-center text-base font-semibold text-white shadow-[0_8px_16px_rgba(254,143,104,0.3)] hover:bg-[var(--peach-deep)] transition-all"
                   >
-                    {item.label}
-                  </Link>
-                ))}
-                <a
-                  href="/contact"
-                  className="mt-2 rounded-xl bg-[var(--peach)] px-4 py-3 text-sm font-semibold text-white text-center hover:bg-[var(--peach-deep)]"
-                >
-                  Book a Session
-                </a>
-              </nav>
+                    Book a Session
+                  </a>
+                </div>
+              </div>
             </div>
           </details>
         </div>

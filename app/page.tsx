@@ -305,7 +305,7 @@ export default function Home() {
 
           <div className="mt-16 grid gap-12 md:grid-cols-3">
             {/* Youth & Teens - Image K */}
-            <article key="youth" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+            <article key="youth" className="scroll-animate rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all" style={{ animationDelay: '0ms' }}>
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
@@ -326,7 +326,7 @@ export default function Home() {
             </article>
 
             {/* Young Adults - Image G */}
-            <article key="young-adults" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+            <article key="young-adults" className="scroll-animate rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all" style={{ animationDelay: '80ms' }}>
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-GHa5h7KBMyrB4WH5lCWI0NkTDB14OO.webp"
@@ -347,7 +347,7 @@ export default function Home() {
             </article>
 
             {/* Families - Image J */}
-            <article key="families" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+            <article key="families" className="scroll-animate rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all" style={{ animationDelay: '160ms' }}>
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-n3SiOuqM9SIL7y3DrKZbc4CjNhiy5g.webp"
@@ -434,10 +434,11 @@ export default function Home() {
           </p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {resources.map((resource) => (
+            {resources.map((resource, index) => (
               <article
                 key={resource.title}
-                className="rounded-[1.5rem] border border-white/80 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
+                className="scroll-animate rounded-[1.5rem] border border-white/80 bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
                 <div className="mb-4">
                   <ResourceIcon type={resource.iconType} />
