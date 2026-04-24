@@ -126,7 +126,7 @@ export default function Speaking() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
           <div className="relative h-[400px] w-full md:h-[500px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/28-drX4GLojcjbnZnNFaNgD8m67CxNhCK.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/28-AHwozixyiwPpwYmHgTtO96klIjYk8N.webp"
               alt="Hands on Bible together, faith community"
               fill
               className="object-cover"
@@ -166,7 +166,7 @@ export default function Speaking() {
           {/* Image J - Group from behind */}
           <div className="mt-20 relative overflow-hidden rounded-[2.5rem] h-72">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-5VzkBd4wSpzKZuUCYV4lAmXARqd52b.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-n3SiOuqM9SIL7y3DrKZbc4CjNhiy5g.webp"
               alt="Group united together, unity and hope"
               fill
               className="object-cover"
@@ -211,7 +211,7 @@ export default function Speaking() {
             {/* Image C - Young woman on video call */}
             <div className="relative h-[500px] overflow-hidden rounded-[2rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-F4iU0vE6VY6PvDqAHpocbsYIalF27J.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-dKD35Ht8rkT1J8nSOqv6IdMG0U8UvR.webp"
                 alt="Young woman on video call, engaged"
                 fill
                 className="object-cover"
@@ -225,7 +225,7 @@ export default function Speaking() {
       <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-CjPSwxVDLHerIyuAt0JnIdqvIJXfG7.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
             alt="Joyful teenagers laughing"
             fill
             className="object-cover"

@@ -128,7 +128,7 @@ export default function Contact() {
             {/* Image E - One-on-one counseling */}
             <div className="relative h-[400px] overflow-hidden rounded-[2.5rem] lg:h-[500px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-dnCZLZWgGkUpHyoAoybcm6nFZWCs7e.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-PP3b2FIhmDYtGarg7jonW91ebBHnrl.webp"
                 alt="One-on-one counseling session, warm and inviting"
                 fill
                 className="object-cover"
@@ -250,7 +250,7 @@ export default function Contact() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
           <div className="relative h-[350px] w-full md:h-[450px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-hskpGkVkXncEE10BoJcxFHbYnDRas7.webp"
               alt="Hands held together, warmth and connection"
               fill
               className="object-cover"
@@ -370,7 +370,7 @@ export default function Contact() {
             {/* Image B - Young woman on sofa with phone and credit card */}
             <div className="relative h-[500px] overflow-hidden rounded-[2rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-SR2Pny7CUBZIaE9ttSN23NP452SGzd.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-nD4TQL7qg2yWE0vOnAjnpQvUwTEpHo.webp"
                 alt="Young woman on sofa, relaxed and accessible"
                 fill
                 className="object-cover"

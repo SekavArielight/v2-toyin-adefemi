@@ -102,7 +102,7 @@ export default function About() {
             {/* Image E - One-on-one counseling session */}
             <div className="relative h-[500px] overflow-hidden rounded-[2rem]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-dnCZLZWgGkUpHyoAoybcm6nFZWCs7e.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-PP3b2FIhmDYtGarg7jonW91ebBHnrl.webp"
                 alt="One-on-one counseling session with warm window light"
                 fill
                 className="object-cover"
@@ -184,7 +184,7 @@ export default function About() {
           {/* Image H - Hands held together with overlay */}
           <div className="mt-24 relative overflow-hidden rounded-[2.5rem] h-64">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-hskpGkVkXncEE10BoJcxFHbYnDRas7.webp"
               alt="Hands held together in support"
               fill
               className="object-cover"
@@ -198,7 +198,7 @@ export default function About() {
       <section className="relative overflow-hidden px-6 py-28 lg:px-10 lg:py-40">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-FL3hNYHBI2ywJWWYVr5t3G9rmn0520.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-icvWhFNHuWubzvdIxEbA6weFN6VE1D.webp"
             alt="Woman being comforted by group"
             fill
             className="object-cover"
