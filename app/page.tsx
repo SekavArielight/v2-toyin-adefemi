@@ -201,7 +201,7 @@ export default function Home() {
             {/* Large Portrait - Image F */}
             <div className="relative h-[500px] overflow-hidden rounded-[2.5rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-YZxKi6TwlKhYxOPPoD5qTw1H3kPbq0.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-uh0BZKyG7teGJhAj8Ax88YXool7XiO.png"
                 alt="Counselor with tablet, warm and professional"
                 fill
                 className="object-cover"
