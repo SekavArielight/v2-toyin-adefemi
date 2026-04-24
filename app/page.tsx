@@ -72,9 +72,21 @@ const features = [
 ];
 
 const resources = [
-  { title: "Trauma-informed Worksheets", iconType: "document" },
-  { title: "Faith & Healing Resources", iconType: "star" },
-  { title: "Stress Relief Guides", iconType: "leaf" },
+  { 
+    title: "Trauma-informed Worksheets", 
+    iconType: "document",
+    description: "Interactive worksheets designed to help you process emotions, identify triggers, and build resilience between sessions."
+  },
+  { 
+    title: "Faith & Healing Resources", 
+    iconType: "star",
+    description: "Scripture-based devotionals and reflective guides to deepen your spiritual connection and find comfort in God's word."
+  },
+  { 
+    title: "Stress Relief Guides", 
+    iconType: "leaf",
+    description: "Practical techniques including breathing exercises, grounding strategies, and mindfulness practices for daily emotional regulation."
+  },
 ];
 
 function ResourceIcon({ type }: { type: string }) {
@@ -299,6 +311,7 @@ export default function Home() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
                   alt="Joyful diverse teenagers"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -319,6 +332,7 @@ export default function Home() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-GHa5h7KBMyrB4WH5lCWI0NkTDB14OO.webp"
                   alt="Young woman in counseling, reflective"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -339,6 +353,7 @@ export default function Home() {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-n3SiOuqM9SIL7y3DrKZbc4CjNhiy5g.webp"
                   alt="Group from behind with arms around each other"
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -371,7 +386,10 @@ export default function Home() {
           <p className="mt-4 text-3xl italic leading-relaxed text-white sm:text-4xl">
             Clients describe Toyin&apos;s counseling as compassionate, grounding, and deeply Spirit-led—a place where they feel understood, supported, and guided toward emotional and spiritual wholeness.
           </p>
-          <p className="mt-10 text-sm font-semibold uppercase tracking-wider text-slate-200">
+          <p className="mt-8 text-sm font-semibold uppercase tracking-wider text-[var(--peach)]">
+            — Client Experience, 2024
+          </p>
+          <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-slate-200">
             Stories of Healing
           </p>
         </div>
@@ -428,7 +446,7 @@ export default function Home() {
                   {resource.title}
                 </h3>
                 <p className="mt-4 text-slate-600">
-                  Thoughtfully designed resource to support your emotional and spiritual growth.
+                  {resource.description}
                 </p>
                 <a
                   href="/contact"
@@ -446,10 +464,10 @@ export default function Home() {
       <section className="relative bg-slate-800 px-6 py-32 lg:px-10 lg:py-40">
         <div className="mx-auto max-w-3xl text-center">
           <p className="italic text-2xl leading-relaxed text-white sm:text-3xl">
-            "For God has not given us a spirit of fear, but of power and of love and of a sound mind."
+            "He heals the brokenhearted and binds up their wounds."
           </p>
           <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-[var(--peach)]">
-            2 Timothy 1:7
+            Psalm 147:3
           </p>
         </div>
       </section>
