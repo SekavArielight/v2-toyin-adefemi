@@ -54,12 +54,20 @@ export function Header() {
           >
             Book a Session
           </a>
-          <details className="mobile-nav relative md:hidden">
+          <details className="mobile-nav group relative md:hidden" onToggle={(e) => {
+            if (!(e.currentTarget as HTMLDetailsElement).open) {
+              // Menu is being closed
+              document.body.style.overflow = '';
+            } else {
+              // Menu is being opened
+              document.body.style.overflow = 'hidden';
+            }
+          }}>
             <summary className="flex h-10 w-10 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none hover:bg-slate-50 cursor-pointer">
               <span className="sr-only">Toggle navigation menu</span>
               <svg
                 viewBox="0 0 24 24"
-                className="h-5 w-5 transition-transform duration-200"
+                className="h-5 w-5 transition-transform duration-200 group-open:rotate-90"
                 aria-hidden="true"
               >
                 <path
@@ -71,15 +79,20 @@ export function Header() {
                 />
               </svg>
             </summary>
-            <div className="fixed inset-0 z-40 overflow-y-auto bg-white/95 backdrop-blur-sm md:hidden">
-              <div className="flex min-h-full flex-col">
-                {/* Close button area - matches header height */}
+            <div className="fixed inset-0 z-40 overflow-y-auto bg-white/98 backdrop-blur-sm md:hidden" onClick={(e) => {
+              const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
+              if (details && e.target === e.currentTarget) {
+                details.open = false;
+              }
+            }}>
+              <div className="flex min-h-full flex-col" onClick={(e) => e.stopPropagation()}>
+                {/* Close button area */}
                 <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
                   <span className="text-sm font-semibold text-slate-600">Menu</span>
                   <button
                     type="button"
-                    onClick={(e) => {
-                      const details = (e.target as HTMLElement).closest('details');
+                    onClick={() => {
+                      const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
                       if (details) details.open = false;
                     }}
                     className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100"
@@ -98,8 +111,8 @@ export function Header() {
                       key={item.label}
                       href={item.href}
                       className="rounded-xl px-4 py-4 text-lg font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-colors"
-                      onClick={(e) => {
-                        const details = (e.target as HTMLElement).closest('details');
+                      onClick={() => {
+                        const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
                         if (details) details.open = false;
                       }}
                     >
@@ -113,8 +126,8 @@ export function Header() {
                   <a
                     href="/contact"
                     className="block rounded-xl bg-[var(--peach)] px-6 py-4 text-center text-base font-semibold text-white shadow-[0_8px_16px_rgba(254,143,104,0.3)] hover:bg-[var(--peach-deep)] transition-all"
-                    onClick={(e) => {
-                      const details = (e.target as HTMLElement).closest('details');
+                    onClick={() => {
+                      const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
                       if (details) details.open = false;
                     }}
                   >
