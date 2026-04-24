@@ -36,7 +36,7 @@ export default function WorkWithMe() {
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-gstSfUowvZbzXDAodEUX9tkJPwKDwZ.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-GHa5h7KBMyrB4WH5lCWI0NkTDB14OO.webp"
                   alt="Young woman in counseling"
                   fill
                   className="object-cover"
@@ -65,7 +65,7 @@ export default function WorkWithMe() {
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/33-j2sVvZEFnQBSeNdGbhRZKHT6ViNOQr.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/33-ZUgC0siRnCGFgVRsHZclbCP8TnLYvs.webp"
                   alt="Young man in distress with counselor"
                   fill
                   className="object-cover"
@@ -94,7 +94,7 @@ export default function WorkWithMe() {
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/34-eZSRDOjMOZ6VRmN0YCdwcfPRzyBGdd.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/34-u4Vn0j83H1m9lwmFr666hQi5gWdBB8.webp"
                   alt="Group therapy session"
                   fill
                   className="object-cover"
@@ -123,7 +123,7 @@ export default function WorkWithMe() {
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/26-UkHVmG39LtKqUnn0scCjLxwKeWG2Tj.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/26-xs9JEM2M8GFjgjCsryzB72sUmkF6l0.webp"
                   alt="Youth group circle engaged"
                   fill
                   className="object-cover"
@@ -209,7 +209,7 @@ export default function WorkWithMe() {
             {/* Image F - Counselor with tablet */}
             <div className="relative h-[500px] overflow-hidden rounded-[2rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-YZxKi6TwlKhYxOPPoD5qTw1H3kPbq0.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-shJXO8u6KicfSGHQLUSpphKbFuyUu0.webp"
                 alt="Counselor with tablet, professional and warm"
                 fill
                 className="object-cover"
@@ -275,7 +275,7 @@ export default function WorkWithMe() {
             <article key="youth" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-CjPSwxVDLHerIyuAt0JnIdqvIJXfG7.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
                   alt="Joyful diverse teenagers"
                   fill
                   className="object-cover"
@@ -295,7 +295,7 @@ export default function WorkWithMe() {
             <article key="young-adults" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-F4iU0vE6VY6PvDqAHpocbsYIalF27J.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-dKD35Ht8rkT1J8nSOqv6IdMG0U8UvR.webp"
                   alt="Young woman on video call, engaged"
                   fill
                   className="object-cover"
@@ -315,7 +315,7 @@ export default function WorkWithMe() {
             <article key="families" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-5VzkBd4wSpzKZuUCYV4lAmXARqd52b.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-n3SiOuqM9SIL7y3DrKZbc4CjNhiy5g.webp"
                   alt="Group from behind with arms around each other"
                   fill
                   className="object-cover"
