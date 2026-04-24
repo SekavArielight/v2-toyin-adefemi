@@ -201,7 +201,7 @@ export default function Home() {
             {/* Large Portrait - Image F */}
             <div className="relative h-[500px] overflow-hidden rounded-[2.5rem] lg:h-[600px]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-uh0BZKyG7teGJhAj8Ax88YXool7XiO.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-shJXO8u6KicfSGHQLUSpphKbFuyUu0.webp"
                 alt="Counselor with tablet, warm and professional"
                 fill
                 className="object-cover"
@@ -296,7 +296,7 @@ export default function Home() {
             <article key="youth" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-CjPSwxVDLHerIyuAt0JnIdqvIJXfG7.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
                   alt="Joyful diverse teenagers"
                   fill
                   className="object-cover"
@@ -316,7 +316,7 @@ export default function Home() {
             <article key="young-adults" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-gstSfUowvZbzXDAodEUX9tkJPwKDwZ.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-GHa5h7KBMyrB4WH5lCWI0NkTDB14OO.webp"
                   alt="Young woman in counseling, reflective"
                   fill
                   className="object-cover"
@@ -336,7 +336,7 @@ export default function Home() {
             <article key="families" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-5VzkBd4wSpzKZuUCYV4lAmXARqd52b.png"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-n3SiOuqM9SIL7y3DrKZbc4CjNhiy5g.webp"
                   alt="Group from behind with arms around each other"
                   fill
                   className="object-cover"
@@ -359,7 +359,7 @@ export default function Home() {
       <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-hskpGkVkXncEE10BoJcxFHbYnDRas7.webp"
             alt="Hands held together supportively"
             fill
             className="object-cover"
