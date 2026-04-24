@@ -77,7 +77,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* My Calling — Flipped Asymmetric */}
+      {/* My Calling — Flipped Asymmetric with Image E */}
       <section className="relative bg-white px-6 py-28 lg:px-10 lg:py-40">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-20 lg:grid-cols-[1fr_440px]">
@@ -99,11 +99,11 @@ export default function About() {
               </p>
             </div>
 
-            {/* Image */}
+            {/* Image E - One-on-one counseling session */}
             <div className="relative h-[500px] overflow-hidden rounded-[2rem]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-7yYIx322NN3alyDRHYP1qeih63lrri.png"
-                alt="Counselor in conversation with client"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-dnCZLZWgGkUpHyoAoybcm6nFZWCs7e.png"
+                alt="One-on-one counseling session with warm window light"
                 fill
                 className="object-cover"
               />
@@ -140,7 +140,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* My Approach with Accent Border Cards */}
+      {/* My Approach with Image H Break */}
       <section className="relative bg-white px-6 py-28 lg:px-10 lg:py-40">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-5xl font-bold tracking-tight text-slate-900">
@@ -156,7 +156,7 @@ export default function About() {
             {[
               {
                 title: "Biblical Foundation",
-                description: "Rooted in Scripture and the heart of Christ — every conversation anchored in God&apos;s truth and redemptive love.",
+                description: "Rooted in Scripture and the heart of Christ — every conversation anchored in God's truth and redemptive love.",
               },
               {
                 title: "Trauma-Informed Care",
@@ -180,16 +180,36 @@ export default function About() {
               </article>
             ))}
           </div>
+
+          {/* Image H - Hands held together with overlay */}
+          <div className="mt-24 relative overflow-hidden rounded-[2.5rem] h-64">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+              alt="Hands held together in support"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-sky-500/40" />
+          </div>
         </div>
       </section>
 
-      {/* Warm, Intentional CTA Closing */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 to-white px-6 py-32 lg:px-10 lg:py-48">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl font-bold leading-tight text-slate-900 sm:text-6xl">
+      {/* Warm, Intentional CTA Closing with Image D */}
+      <section className="relative overflow-hidden px-6 py-28 lg:px-10 lg:py-40">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-FL3hNYHBI2ywJWWYVr5t3G9rmn0520.png"
+            alt="Woman being comforted by group"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/50" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <h2 className="text-5xl font-bold leading-tight text-white sm:text-6xl">
             Let&apos;s Begin Your Journey
           </h2>
-          <p className="mt-8 text-2xl leading-relaxed text-slate-600">
+          <p className="mt-8 text-2xl leading-relaxed text-slate-100">
             If you&apos;re ready to experience healing, discover your identity, and step boldly into your purpose, I&apos;d be honored to walk alongside you. Let&apos;s create a safe space where your story matters and your growth is possible.
           </p>
 
@@ -208,7 +228,7 @@ export default function About() {
             </a>
           </div>
 
-          <p className="mt-10 text-sm text-slate-500">
+          <p className="mt-10 text-sm text-slate-300">
             Ready to talk? You can also call or email to schedule your first session.
           </p>
         </div>
