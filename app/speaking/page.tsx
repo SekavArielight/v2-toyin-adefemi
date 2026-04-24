@@ -121,13 +121,13 @@ export default function Speaking() {
         </div>
       </section>
 
-      {/* Large Immersive Image Break */}
+      {/* Large Immersive Image Break - Image M */}
       <section className="relative bg-slate-50 px-6 py-0 lg:px-10">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem]">
           <div className="relative h-[400px] w-full md:h-[500px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-dCqoaTNJVeM70U4Qc1GKNm43ui8E1i.png"
-              alt="Group of young people united together"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/28-drX4GLojcjbnZnNFaNgD8m67CxNhCK.png"
+              alt="Hands on Bible together, faith community"
               fill
               className="object-cover"
             />
@@ -135,9 +135,9 @@ export default function Speaking() {
         </div>
       </section>
 
-      {/* Speaking Topics — Conference Card Style */}
+      {/* Speaking Topics — Conference Card Style with Image J */}
       <section className="relative bg-white px-6 py-32 lg:px-10 lg:py-40">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <h2 className="text-5xl font-bold tracking-tight text-slate-900">
             Speaking Topics
           </h2>
@@ -162,48 +162,81 @@ export default function Speaking() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Speaking Formats — Two-Column List Layout */}
-      <section className="relative bg-slate-50 px-6 py-32 lg:px-10 lg:py-40">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-5xl font-bold tracking-tight text-slate-900">
-            Speaking Formats
-          </h2>
-          <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
-
-          <p className="mt-10 max-w-3xl text-xl leading-8 text-slate-600">
-            Flexible options designed to fit your organization's needs and audience:
-          </p>
-
-          <div className="mt-16 grid gap-10 md:grid-cols-2">
-            {formats.map((format) => (
-              <div key={format.title} className="flex gap-6">
-                <div className="flex-shrink-0 pt-1">
-                  <div className="flex h-3 w-3 items-center justify-center rounded-full bg-[var(--peach)]" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900">
-                    {format.title}
-                  </h3>
-                  <p className="mt-3 leading-7 text-slate-600">
-                    {format.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Image J - Group from behind */}
+          <div className="mt-20 relative overflow-hidden rounded-[2.5rem] h-72">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-5VzkBd4wSpzKZuUCYV4lAmXARqd52b.png"
+              alt="Group united together, unity and hope"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      {/* Warm Genuine Invitation CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-sky-100 via-sky-50 to-white px-6 py-40 lg:px-10 lg:py-52">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-5xl font-bold leading-tight text-slate-900 sm:text-6xl lg:text-7xl">
+      {/* Speaking Formats — Two-Column List Layout with Image C */}
+      <section className="relative bg-slate-50 px-6 py-32 lg:px-10 lg:py-40">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1fr_380px]">
+            <div>
+              <h2 className="text-5xl font-bold tracking-tight text-slate-900">
+                Speaking Formats
+              </h2>
+              <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
+
+              <p className="mt-10 max-w-3xl text-xl leading-8 text-slate-600">
+                Flexible options designed to fit your organization's needs and audience:
+              </p>
+
+              <div className="mt-16 grid gap-10 md:grid-cols-2">
+                {formats.map((format) => (
+                  <div key={format.title} className="flex gap-6">
+                    <div className="flex-shrink-0 pt-1">
+                      <div className="flex h-3 w-3 items-center justify-center rounded-full bg-[var(--peach)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900">
+                        {format.title}
+                      </h3>
+                      <p className="mt-3 leading-7 text-slate-600">
+                        {format.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image C - Young woman on video call */}
+            <div className="relative h-[500px] overflow-hidden rounded-[2rem] lg:h-[600px]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-F4iU0vE6VY6PvDqAHpocbsYIalF27J.png"
+                alt="Young woman on video call, engaged"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Warm Genuine Invitation CTA with Image K */}
+      <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-CjPSwxVDLHerIyuAt0JnIdqvIJXfG7.png"
+            alt="Joyful teenagers laughing"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-sky-600/45" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-5xl text-center">
+          <h2 className="text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
             Ready to Inspire Your Community?
           </h2>
-          <p className="mx-auto mt-8 max-w-3xl text-2xl leading-relaxed text-slate-600">
+          <p className="mx-auto mt-8 max-w-3xl text-2xl leading-relaxed text-slate-100">
             I&apos;d love to discuss how I can support your event, organization, or community with a message of healing, hope, and transformation rooted in Scripture and emotional wisdom.
           </p>
 
@@ -216,13 +249,13 @@ export default function Speaking() {
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border-2 border-slate-300 bg-white px-10 py-5 text-lg font-semibold text-slate-900 transition-all hover:border-slate-400 hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-2xl border-2 border-white bg-white/10 px-10 py-5 text-lg font-semibold text-white transition-all hover:bg-white/20"
             >
               Get in Touch
             </a>
           </div>
 
-          <p className="mt-12 text-sm text-slate-500">
+          <p className="mt-12 text-sm text-slate-200">
             Let&apos;s talk about bringing healing and hope to your audience.
           </p>
         </div>

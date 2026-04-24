@@ -198,11 +198,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Large Portrait */}
+            {/* Large Portrait - Image F */}
             <div className="relative h-[500px] overflow-hidden rounded-[2.5rem] lg:h-[600px]">
               <Image
-                src="/images/toyin-portrait.jpg"
-                alt="Portrait of Toyin Adefemi"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-YZxKi6TwlKhYxOPPoD5qTw1H3kPbq0.png"
+                alt="Counselor with tablet, warm and professional"
                 fill
                 className="object-cover"
               />
@@ -283,40 +283,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who I Serve — Three Distinct Warm Cards */}
+      {/* Who I Serve — Three Distinct Warm Cards with Images */}
       <section className="relative bg-slate-50 px-6 py-32 lg:px-10 lg:py-40">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <h2 className="text-5xl font-bold tracking-tight text-slate-900">
             Who I Serve
           </h2>
           <div className="mt-6 h-1 w-20 bg-[var(--peach)]" />
 
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {audiences.map((audience) => (
-              <article
-                key={audience.title}
-                className={`rounded-[2rem] border border-white/80 bg-gradient-to-br ${audience.bgGradient} p-10 shadow-[0_4px_12px_rgba(0,0,0,0.05)]`}
-              >
+          <div className="mt-16 grid gap-12 md:grid-cols-3">
+            {/* Youth & Teens - Image K */}
+            <article key="youth" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-CjPSwxVDLHerIyuAt0JnIdqvIJXfG7.png"
+                  alt="Joyful diverse teenagers"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-sky-100 to-cyan-50 p-10 border-t border-white/80">
                 <h3 className="text-2xl font-bold text-slate-900">
-                  {audience.title}
+                  Youth & Teens
                 </h3>
                 <p className="mt-4 leading-7 text-slate-700">
-                  {audience.description}
+                  Support for emotional wounds, identity struggles, and life transitions.
                 </p>
-              </article>
-            ))}
+              </div>
+            </article>
+
+            {/* Young Adults - Image G */}
+            <article key="young-adults" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13-gstSfUowvZbzXDAodEUX9tkJPwKDwZ.png"
+                  alt="Young woman in counseling, reflective"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-emerald-100 to-teal-50 p-10 border-t border-white/80">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Young Adults
+                </h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  Guidance for purpose, healing, relationships, and spiritual growth.
+                </p>
+              </div>
+            </article>
+
+            {/* Families - Image J */}
+            <article key="families" className="rounded-[2rem] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/30-5VzkBd4wSpzKZuUCYV4lAmXARqd52b.png"
+                  alt="Group from behind with arms around each other"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-amber-100 to-orange-50 p-10 border-t border-white/80">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Families
+                </h3>
+                <p className="mt-4 leading-7 text-slate-700">
+                  Restoring communication, connection, and Christ-centered unity.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* Testimonial — Full-Width Atmospheric Section */}
-      <section className="relative overflow-hidden bg-slate-700 px-6 py-40 lg:px-10 lg:py-52">
-        <div className="mx-auto max-w-4xl text-center">
+      {/* Testimonial — Full-Width Atmospheric Section with Image H */}
+      <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-iEHcpVqIezI4GA4u3lQLY70fe146GQ.png"
+            alt="Hands held together supportively"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/45" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <span className="text-7xl text-[var(--peach)] leading-none">❝</span>
           <p className="mt-4 text-3xl italic leading-relaxed text-white sm:text-4xl">
             Clients describe Toyin&apos;s counseling as compassionate, grounding, and deeply Spirit-led—a place where they feel understood, supported, and guided toward emotional and spiritual wholeness.
           </p>
-          <p className="mt-10 text-sm font-semibold uppercase tracking-wider text-slate-300">
+          <p className="mt-10 text-sm font-semibold uppercase tracking-wider text-slate-200">
             Stories of Healing
           </p>
         </div>
