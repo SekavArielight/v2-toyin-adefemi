@@ -31,7 +31,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-xl">
+      <header className={`sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-xl transition-opacity duration-300 ${isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -97,7 +97,7 @@ export function Header() {
       {/* Full-Screen Mobile Menu Overlay - Outside Header Container */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 z-40 bg-[#3A4A52] md:hidden"
+          className="fixed inset-0 z-[60] bg-[#3A4A52] md:hidden overflow-hidden"
           style={{
             animation: 'slideInFromRight 300ms ease-in-out forwards',
           }}
