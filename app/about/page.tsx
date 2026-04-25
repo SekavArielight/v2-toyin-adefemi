@@ -184,10 +184,11 @@ export default function About() {
                 description: "Emotional regulation, mindset renewal, and resilient next steps — equipping you for lasting transformation.",
                 icon: "tools",
               },
-            ].map((pillar) => (
+            ].map((pillar, index) => (
               <article
                 key={pillar.title}
-                className="border-l-4 border-[var(--peach)] rounded-lg bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                className="scroll-animate border-l-4 border-[var(--peach)] rounded-lg bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
                 <div className="mb-4">
                   {pillar.icon === "book" && (
