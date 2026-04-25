@@ -54,20 +54,12 @@ export function Header() {
           >
             Book a Session
           </a>
-          <details className="mobile-nav group relative md:hidden" onToggle={(e) => {
-            if (!(e.currentTarget as HTMLDetailsElement).open) {
-              // Menu is being closed
-              document.body.style.overflow = '';
-            } else {
-              // Menu is being opened
-              document.body.style.overflow = 'hidden';
-            }
-          }}>
+          <details className="mobile-nav relative md:hidden">
             <summary className="flex h-10 w-10 list-none items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm marker:content-none hover:bg-slate-50 cursor-pointer">
               <span className="sr-only">Toggle navigation menu</span>
               <svg
                 viewBox="0 0 24 24"
-                className="h-5 w-5 transition-transform duration-200 group-open:rotate-90"
+                className="h-5 w-5 transition-transform duration-200"
                 aria-hidden="true"
               >
                 <path
@@ -79,63 +71,32 @@ export function Header() {
                 />
               </svg>
             </summary>
-            <div className="fixed inset-0 z-40 overflow-y-auto bg-white/98 backdrop-blur-sm md:hidden" onClick={(e) => {
-              const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
-              if (details && e.target === e.currentTarget) {
-                details.open = false;
-              }
-            }}>
-              <div className="flex min-h-full flex-col" onClick={(e) => e.stopPropagation()}>
-                {/* Close button area */}
-                <div className="flex items-center justify-between border-b border-slate-100 px-6 py-4">
-                  <span className="text-sm font-semibold text-slate-600">Menu</span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
-                      if (details) details.open = false;
-                    }}
-                    className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100"
-                    aria-label="Close menu"
-                  >
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                
-                {/* Navigation items */}
-                <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-8">
-                  {navigation.map((item) => (
+            <nav className="absolute right-0 top-[calc(100%+0.75rem)] w-[min(16rem,calc(100vw-1.5rem))] overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_24px_50px_rgba(36,51,66,0.14)]">
+              <div className="flex flex-col gap-2">
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="rounded-xl px-4 py-4 text-lg font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-colors"
-                      onClick={() => {
-                        const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
-                        if (details) details.open = false;
-                      }}
+                      className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                        isActive
+                          ? 'bg-[var(--peach)]/10 text-slate-900'
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-slate-950'
+                      }`}
                     >
                       {item.label}
                     </Link>
-                  ))}
-                </nav>
-                
-                {/* CTA button at bottom */}
-                <div className="border-t border-slate-100 px-6 py-6">
-                  <a
-                    href="/contact"
-                    className="block rounded-xl bg-[var(--peach)] px-6 py-4 text-center text-base font-semibold text-white shadow-[0_8px_16px_rgba(254,143,104,0.3)] hover:bg-[var(--peach-deep)] transition-all"
-                    onClick={() => {
-                      const details = document.querySelector('.mobile-nav') as HTMLDetailsElement;
-                      if (details) details.open = false;
-                    }}
-                  >
-                    Book a Session
-                  </a>
-                </div>
+                  );
+                })}
+                <a
+                  href="/contact"
+                  className="mt-2 rounded-xl bg-[var(--peach)] px-4 py-3 text-center text-sm font-semibold text-white hover:bg-[var(--peach-deep)] transition-all"
+                >
+                  Book a Session
+                </a>
               </div>
-            </div>
+            </nav>
           </details>
         </div>
       </div>

@@ -130,17 +130,17 @@ export default function Home() {
         </div>
         <div className="hero-mask relative mx-auto grid max-w-7xl gap-8 px-6 pb-20 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-28 lg:pt-24">
           <div className="flex max-w-2xl flex-col justify-center py-12 lg:py-20">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-white drop-shadow-lg sm:text-sm lg:text-sky-700">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">
               Trauma-informed, Scripture-centered care
             </p>
-            <h1 className="max-w-xl text-4xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-7xl lg:text-slate-900 lg:drop-shadow-none">
+            <h1 className="max-w-xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
               Healing begins with a safe place to be fully seen.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white drop-shadow-md sm:text-lg lg:text-slate-600 lg:drop-shadow-none">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
               Biblical counseling for youth, young adults, and families rooted
               in compassion, emotional wisdom, and Christ-centered restoration.
             </p>
-            <p className="mt-4 max-w-2xl text-sm leading-8 text-white/90 drop-shadow-md sm:text-base lg:text-slate-500 lg:drop-shadow-none">
+            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-500 sm:text-lg">
               Welcome to a space where young people and families can process
               pain, rebuild identity, and experience emotional and spiritual
               renewal. You do not have to navigate life&apos;s hardest seasons
