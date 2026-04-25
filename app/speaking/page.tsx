@@ -57,17 +57,26 @@ export default function Speaking() {
 
   return (
     <>
-      {/* Bold Stage-Like Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 to-white px-6 py-36 lg:px-10 lg:py-48">
-        <div className="mx-auto max-w-6xl">
+      {/* Bold Stage-Like Hero with Youth Group Image Background */}
+      <section className="relative overflow-hidden px-6 py-36 lg:px-10 lg:py-48">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31-N424m4nO0REek7JhpPtoSuCDBhsxZZ.webp"
+            alt="Joyful youth group circle"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/50" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-6xl">
           <div className="max-w-5xl">
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">
+            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.22em] text-white/80">
               Speaking & Workshops
             </p>
-            <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-7xl lg:text-8xl">
+            <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
               A Speaker <span className="block text-[var(--peach)]">Who Inspires</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-2xl leading-relaxed text-slate-600">
+            <p className="mt-8 max-w-2xl text-2xl leading-relaxed text-white/90">
               Biblical, trauma-informed messages that bring healing, identity, and transformation to your organization.
             </p>
           </div>
@@ -147,11 +156,12 @@ export default function Speaking() {
             I customize presentations for your specific audience and needs. Here are some of my popular topics:
           </p>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {topics.map((topic) => (
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {topics.map((topic, index) => (
               <article
                 key={topic.title}
-                className="border-t-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] transition-all"
+                className="scroll-animate rounded-xl border-t-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
                 <h3 className="text-2xl font-bold text-slate-900">
                   {topic.title}
@@ -172,6 +182,27 @@ export default function Speaking() {
               className="object-cover"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Bible Hands Atmospheric Image with Scripture - Image M */}
+      <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/28-AHwozixyiwPpwYmHgTtO96klIjYk8N.webp"
+            alt="Hands on Bible together, faith community"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-900/50" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <p className="italic text-3xl leading-relaxed text-white sm:text-4xl">
+            "Come to me, all you who are weary and burdened, and I will give you rest."
+          </p>
+          <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-[var(--peach)]">
+            Matthew 11:28
+          </p>
         </div>
       </section>
 
@@ -221,7 +252,7 @@ export default function Speaking() {
         </div>
       </section>
 
-      {/* Warm Genuine Invitation CTA with Image K */}
+      {/* Warm Genuine Invitation CTA with Image K - Joyful Teens */}
       <section className="relative overflow-hidden px-6 py-40 lg:px-10 lg:py-52">
         <div className="absolute inset-0 z-0">
           <Image
@@ -230,32 +261,26 @@ export default function Speaking() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-sky-600/45" />
+          <div className="absolute inset-0 bg-[var(--peach)]/40" />
         </div>
         <div className="relative z-10 mx-auto max-w-5xl text-center">
           <h2 className="text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
             Ready to Inspire Your Community?
           </h2>
-          <p className="mx-auto mt-8 max-w-3xl text-2xl leading-relaxed text-slate-100">
+          <p className="mx-auto mt-8 max-w-3xl text-2xl leading-relaxed text-white/95">
             I&apos;d love to discuss how I can support your event, organization, or community with a message of healing, hope, and transformation rooted in Scripture and emotional wisdom.
           </p>
 
-          <div className="mt-14 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
+          <div className="mt-14 flex justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl bg-[var(--peach)] px-10 py-5 text-lg font-semibold text-white shadow-[0_16px_30px_rgba(254,143,104,0.34)] transition-all hover:bg-[var(--peach-deep)] hover:-translate-y-1"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-10 py-5 text-lg font-semibold text-[var(--peach)] shadow-[0_16px_30px_rgba(0,0,0,0.2)] transition-all hover:bg-slate-50 hover:-translate-y-1"
             >
               Inquire About Speaking
             </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border-2 border-white bg-white/10 px-10 py-5 text-lg font-semibold text-white transition-all hover:bg-white/20"
-            >
-              Get in Touch
-            </a>
           </div>
 
-          <p className="mt-12 text-sm text-slate-200">
+          <p className="mt-12 text-sm text-white/80">
             Let&apos;s talk about bringing healing and hope to your audience.
           </p>
         </div>

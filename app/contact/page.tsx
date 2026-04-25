@@ -52,6 +52,14 @@ function InfoIcon({ type }: { type: string }) {
     );
   }
 
+  if (type === "instagram") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.398.8.748 1.15.35.35.684.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
+      </svg>
+    );
+  }
+
   if (type === "email") {
     return (
       <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
@@ -138,13 +146,14 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form — Visual Centerpiece */}
+      {/* Contact Form — Two-Column Layout with Image */}
       <section className="relative bg-white px-6 py-32 lg:px-10 lg:py-40">
-        <div className="mx-auto max-w-2xl">
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_12px_40px_rgba(0,0,0,0.08)] sm:p-14"
-          >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-[0_12px_40px_rgba(0,0,0,0.08)] sm:p-14"
+            >
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-slate-900">
@@ -241,7 +250,18 @@ export default function Contact() {
                 Thank you for reaching out! I&apos;ll be in touch shortly.
               </p>
             )}
-          </form>
+            </form>
+
+            {/* Image E - One-on-one counseling */}
+            <div className="relative h-[400px] overflow-hidden rounded-[2.5rem] lg:h-[500px]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-PP3b2FIhmDYtGarg7jonW91ebBHnrl.webp"
+                alt="One-on-one counseling session, warm and inviting"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -282,7 +302,7 @@ export default function Contact() {
               {
                 iconType: "card",
                 label: "Payment Methods",
-                description: "We accept all major credit cards, PayPal, and bank transfers. Insurance may cover services.",
+                description: "We accept all major credit cards, PayPal, and bank transfers. Insurance is not accepted. Superbills can be provided for potential reimbursement depending on your plan.",
               },
               {
                 iconType: "document",
@@ -299,8 +319,8 @@ export default function Contact() {
                 label: "Response Time",
                 description: "I typically respond to inquiries within 24-48 hours. For urgent matters, please call directly.",
               },
-            ].map((item) => (
-              <article key={item.label} className="border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+            ].map((item, index) => (
+              <article key={item.label} className="scroll-animate border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1" style={{ animationDelay: `${index * 80}ms` }}>
                 <div className="mb-4">
                   <InfoIcon type={item.iconType} />
                 </div>
@@ -328,34 +348,36 @@ export default function Contact() {
                 Whether you have questions, want to book a session, or are interested in speaking opportunities, I&apos;m here to help.
               </p>
 
-              <div className="grid gap-12 md:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-3">
                 {[
                   {
-                    icon: "✉️",
+                    iconType: "email",
                     title: "Email",
-                    detail: "hello@toyinadefemi.com",
-                    description: "Send me a message anytime",
+                    detail: "Reach out anytime",
+                    description: "Send me a message and I'll respond within 24-48 hours",
                   },
                   {
-                    icon: "📞",
+                    iconType: "phone",
                     title: "Phone",
-                    detail: "(555) 123-4567",
-                    description: "Call for urgent matters",
+                    detail: "For urgent matters",
+                    description: "Call directly to connect right away",
                   },
                   {
-                    icon: "🌐",
-                    title: "Social Media",
+                    iconType: "instagram",
+                    title: "Instagram",
                     detail: "@toyinadefemi",
                     description: "Follow for resources and updates",
                   },
                 ].map((item) => (
-                  <div key={item.title} className="flex flex-col items-start gap-4 rounded-2xl bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
-                    <div className="text-4xl">{item.icon}</div>
+                  <div key={item.title} className="scroll-animate flex flex-col items-start gap-4 rounded-2xl bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.12)] transition-all">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--peach)]/10">
+                      <InfoIcon type={item.iconType} />
+                    </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-lg font-semibold text-[var(--peach)]">
+                      <p className="mt-2 text-sm font-semibold text-[var(--peach)]">
                         {item.detail}
                       </p>
                       <p className="mt-2 text-sm text-slate-600">

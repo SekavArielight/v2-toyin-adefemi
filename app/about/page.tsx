@@ -112,6 +112,21 @@ export default function About() {
         </div>
       </section>
 
+      {/* Emotional Support Visual Break */}
+      <section className="relative overflow-hidden px-6 py-0 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative h-64 overflow-hidden rounded-[2rem] md:h-96">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-icvWhFNHuWubzvdIxEbA6weFN6VE1D.webp"
+              alt="Woman being comforted by group, emotional support"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-sky-500/30" />
+          </div>
+        </div>
+      </section>
+
       {/* Professional Background with Badge Pills */}
       <section className="relative bg-slate-50 px-6 py-28 lg:px-10 lg:py-40">
         <div className="mx-auto max-w-5xl">
@@ -130,7 +145,7 @@ export default function About() {
               {credentials.map((credential) => (
                 <span
                   key={credential}
-                  className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-700 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-slate-100"
+                  className="inline-flex items-center rounded-full bg-sky-100 px-6 py-3 text-sm font-medium text-slate-800 border border-sky-200"
                 >
                   {credential}
                 </span>
@@ -157,20 +172,41 @@ export default function About() {
               {
                 title: "Biblical Foundation",
                 description: "Rooted in Scripture and the heart of Christ — every conversation anchored in God's truth and redemptive love.",
+                icon: "book",
               },
               {
                 title: "Trauma-Informed Care",
                 description: "Safety, compassion, and emotional wisdom — creating brave spaces where healing can take root and flourish.",
+                icon: "heart",
               },
               {
                 title: "Practical Tools",
                 description: "Emotional regulation, mindset renewal, and resilient next steps — equipping you for lasting transformation.",
+                icon: "tools",
               },
-            ].map((pillar) => (
+            ].map((pillar, index) => (
               <article
                 key={pillar.title}
-                className="border-l-4 border-[var(--peach)] bg-white p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
+                className="scroll-animate border-l-4 border-[var(--peach)] rounded-lg bg-white p-8 shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
+                <div className="mb-4">
+                  {pillar.icon === "book" && (
+                    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+                      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                    </svg>
+                  )}
+                  {pillar.icon === "heart" && (
+                    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                  )}
+                  {pillar.icon === "tools" && (
+                    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-[var(--peach)]" aria-hidden="true">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                  )}
+                </div>
                 <h3 className="text-2xl font-bold text-slate-900">
                   {pillar.title}
                 </h3>
@@ -193,6 +229,21 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Hands-Held Visual Break Before Final CTA */}
+      {/* <section className="relative overflow-hidden px-6 py-0 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative h-64 overflow-hidden rounded-[2rem] md:h-96">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/14-hskpGkVkXncEE10BoJcxFHbYnDRas7.webp"
+              alt="Hands held together in support and unity"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-sky-500/30" />
+          </div>
+        </div>
+      </section> */}
 
       {/* Warm, Intentional CTA Closing with Image D */}
       <section className="relative overflow-hidden px-6 py-28 lg:px-10 lg:py-40">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { AnimationProvider } from "@/components/animation-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,11 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth antialiased">
       <body className="flex min-h-full flex-col bg-white">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <AnimationProvider>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </AnimationProvider>
       </body>
     </html>
   );
